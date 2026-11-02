@@ -39,9 +39,17 @@ input,select,textarea,button{font-family:inherit}
 .home-hero ul{font-size:12px!important;gap:6px 16px!important;margin:0!important}
 .home-gal{grid-template-columns:repeat(2,minmax(0,1fr))!important;grid-auto-rows:clamp(160px,46vw,260px)!important;gap:10px!important}
 .feat-grid{grid-template-columns:1fr!important;gap:14px!important}
+.prod-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:12px!important}
+.sticky-cta{display:flex!important}
+.header-search [role=listbox]{position:fixed!important;top:68px!important;left:12px!important;right:12px!important;min-width:0!important}
+.rel-static{flex-wrap:nowrap!important;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;touch-action:pan-x pan-y;padding:6px 0 18px}.rel-static::-webkit-scrollbar{display:none}
+.prod-grid h2{font-size:14px!important}.prod-grid div>span{font-size:13px!important}
+.cat-marquee{overflow-x:auto!important;-webkit-overflow-scrolling:touch;scrollbar-width:none;touch-action:pan-x pan-y}.cat-marquee::-webkit-scrollbar{display:none}
+.cat-marquee .cat-track{animation:none!important}
 .feat-grid div>span:nth-of-type(1){font-size:12px!important}.feat-grid div>span:nth-of-type(2){font-size:16px!important}
 image-slot::part(image),image-slot::part(frame){touch-action:pan-x pan-y pinch-zoom!important}
 }
+.hero-p .read-more,.hero-p .hero-dots{display:none}@media (max-width:768px){.hero-p:not(.open) .read-more,.hero-p:not(.open) .hero-dots{display:inline}.hero-p:not(.open) .hero-more{display:none}}
 .main-nav{scrollbar-width:none}.main-nav::-webkit-scrollbar{display:none}
 image-slot[src]::part(ring){display:none}
 .hov-card{transition:transform .35s cubic-bezier(.2,.7,.2,1),box-shadow .35s ease,border-color .25s ease}.hov-card:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(21,24,43,0.14)}
@@ -63,9 +71,23 @@ image-slot[src]::part(ring){display:none}
     <div onClick="{{ goHome }}" style="display:flex;align-items:center;cursor:pointer">
       <img class="hdr-logo" src="assets/asbm-logo.webp" alt="Al Sughra Building Materials (ASBM) logo" style="height:80px;width:auto;display:block">
     </div>
-    <label class="header-search" style="width:392px;max-width:100%;display:flex;align-items:center;gap:10px;border:1px solid #d3d6e2;border-radius:999px;padding:0 16px;height:42px;background:#ffffff;cursor:text">
+    <label class="header-search" style="position:relative;width:392px;max-width:100%;display:flex;align-items:center;gap:10px;border:1px solid #d3d6e2;border-radius:999px;padding:0 16px;height:42px;background:#ffffff;cursor:text">
       <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#5b6078" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
-      <input type="search" aria-label="Search products and categories" placeholder="Search for products" style="flex:1;min-width:0;border:none;outline:none;font-size:14px;color:#15182b;background:transparent">
+      <input type="search" aria-label="Search products and categories" placeholder="Search for products" value="{{ q }}" onInput="{{ onSearch }}" onFocus="{{ searchFocus }}" onBlur="{{ searchBlur }}" onKeyDown="{{ searchKey }}" autocomplete="off" style="flex:1;min-width:0;border:none;outline:none;font-size:14px;color:#15182b;background:transparent">
+      <sc-if value="{{ searchOpen }}">
+      <div role="listbox" aria-label="Search results" style="position:absolute;top:calc(100% + 8px);left:0;right:0;min-width:280px;z-index:300;background:#ffffff;border:1px solid #e4e6ee;border-radius:12px;box-shadow:0 18px 40px rgba(21,24,43,0.16);padding:6px;max-height:min(420px,60vh);overflow-y:auto;cursor:default">
+        <sc-for list="{{ searchResults }}" as="r" hint-placeholder-count="4">
+          <div role="option" onMouseDown="{{ r.go }}" style="display:flex;gap:12px;align-items:center;padding:8px 10px;border-radius:8px;cursor:pointer" style-hover="background:#e6f7fe">
+            <div style="width:40px;height:40px;flex:none;border-radius:6px;overflow:hidden;background:#f4f5f8;border:1px solid #eceef4"><img src="{{ r.img }}" alt="" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+            <div style="display:flex;flex-direction:column;gap:2px;min-width:0">
+              <span style="font-size:14px;font-weight:600;color:#15182b;line-height:1.3">{{ r.name }}</span>
+              <span style="font-size:12px;color:#8a8fa6">{{ r.kind }}</span>
+            </div>
+          </div>
+        </sc-for>
+        <sc-if value="{{ searchEmpty }}"><div style="padding:12px 10px;font-size:14px;color:#5b6078">No products or categories match “{{ q }}”.</div></sc-if>
+      </div>
+      </sc-if>
     </label>
     <nav aria-label="Company" class="header-links" style="display:flex;align-items:center;gap:28px;flex-wrap:wrap">
       <div onClick="{{ goAbout }}" style="position:relative;padding:8px 0;font-size:15px;font-weight:500;color:#15182b;cursor:pointer;white-space:nowrap" style-hover="color:#03acee">About Us<sc-if value="{{ isAbout }}"><span style="position:absolute;left:0;right:0;bottom:2px;height:2px;background:#03acee;border-radius:2px"></span></sc-if></div>
@@ -108,7 +130,7 @@ image-slot[src]::part(ring){display:none}
   <div class="hero-inner" style="position:relative;width:100%;max-width:1280px;margin:0 auto;padding:56px 24px 48px;pointer-events:none">
     <div class="hero-copy" style="max-width:680px;display:flex;flex-direction:column;gap:22px;color:#ffffff">
       <h1 style="margin:0;font-size:52px;line-height:1.05;font-weight:800;text-wrap:pretty">Building Materials Supplier in Sharjah &amp; across the UAE</h1>
-      <p style="margin:0;font-size:18px;line-height:1.6;color:#e4e6ee;text-wrap:pretty">Al Sughra Building Materials Trading LLC, with 20+ years of excellence in building materials, supplies tiling and flooring accessories, drywall, plastering and ceiling systems, concrete and masonry accessories, sealing, jointing and protection materials, and scaffolding and architectural products to contractors, fit-out companies and builders across the UAE and the Middle East.</p>
+      <p class="hero-p {{ heroCls }}" style="margin:0;font-size:18px;line-height:1.6;color:#e4e6ee;text-wrap:pretty">Al Sughra Building Materials Trading LLC, with 20+ years of excellence in building materials<span class="hero-dots">… </span><a class="read-more" onClick="{{ heroExpand }}" style="pointer-events:auto;color:#6ac2e8;font-weight:600;text-decoration:underline;text-underline-offset:3px;cursor:pointer;white-space:nowrap">Read more</a><span class="hero-more">, supplies tiling and flooring accessories, drywall, plastering and ceiling systems, concrete and masonry accessories, sealing, jointing and protection materials, and scaffolding and architectural products to contractors, fit-out companies and builders across the UAE and the Middle East.</span></p>
       <div style="display:flex;gap:12px;flex-wrap:wrap;pointer-events:auto">
         <button onClick="{{ goProducts }}" style="border:none;background:#f11a2b;color:#ffffff;padding:16px 30px;border-radius:6px;font-weight:700;font-size:16px;cursor:pointer" style-hover="background:#d10f1f">Shop products</button>
         <button onClick="{{ openQuote }}" style="border:1.5px solid #ffffff;background:transparent;color:#ffffff;padding:16px 30px;border-radius:6px;font-weight:700;font-size:16px;cursor:pointer" style-hover="background:#ffffff;color:#15182b">Bulk enquiry</button>
@@ -494,7 +516,7 @@ image-slot[src]::part(ring){display:none}
     </div>
   </div>
   <div style="max-width:1280px;margin:0 auto;padding:28px 24px 56px;display:flex;flex-direction:column;gap:48px">
-    <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(8px,2vw,24px)">
+    <div class="prod-grid" style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(8px,2vw,24px)">
       <sc-for list="{{ catItems }}" as="p" hint-placeholder-count="3">
         <article class="hov-card" onClick="{{ p.go }}" style="background:#ffffff;border:1px solid #e4e6ee;border-radius:10px;overflow:hidden;display:flex;flex-direction:column;min-width:0;cursor:pointer" style-hover="border-color:#03acee;box-shadow:0 10px 26px rgba(21,24,43,0.10)">
           <div style="aspect-ratio:4/3;position:relative;background:#f4f5f8"><image-slot id="{{ p.slot }}" shape="rect" fit="contain" src="{{ p.mainImg }}" placeholder="Product shot"></image-slot></div>
@@ -566,7 +588,7 @@ image-slot[src]::part(ring){display:none}
           </div>
         </sc-for>
       </div>
-      <div style="display:flex;gap:12px;flex-wrap:wrap">
+      <div class="prod-cta" style="display:flex;gap:12px;flex-wrap:wrap">
         <button onClick="{{ openQuote }}" style="border:none;background:#03acee;color:#ffffff;padding:15px 30px;border-radius:6px;font-weight:700;font-size:16px;cursor:pointer" style-hover="background:#0293cc">Send enquiry</button>
         <a href="{{ curProd.waLink }}" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:10px;border:none;background:#4cc247;color:#ffffff;padding:14px 26px;border-radius:6px;font-weight:500;font-size:17px;box-shadow:0 4px 12px rgba(0,0,0,0.12)" style-hover="background:#3fb03a;color:#ffffff"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.870.12.57-.08 1.76-.72 2.01-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35zM12.04 21.8h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.9-9.88 2.64 0 5.12 1.03 6.99 2.9a9.82 9.82 0 0 1 2.89 6.99c0 5.45-4.44 9.88-9.89 9.88zm8.41-18.3A11.82 11.82 0 0 0 12.040 0C5.5 0 .17 5.33.16 11.88c0 2.1.55 4.14 1.59 5.94L.06 24l6.3-1.65a11.86 11.86 0 0 0 5.68 1.45h.01c6.55 0 11.88-5.33 11.88-11.88 0-3.17-1.24-6.16-3.48-8.4z"/></svg>Message Us</a>
       </div>
@@ -609,7 +631,7 @@ image-slot[src]::part(ring){display:none}
       </div>
     </sc-if>
     <sc-if value="{{ relStatic }}">
-      <div style="display:flex;gap:20px;flex-wrap:wrap">
+      <div class="rel-static" style="display:flex;gap:20px;flex-wrap:wrap">
         <sc-for list="{{ related }}" as="r" hint-placeholder-count="2">
               <article class="hov-card" onClick="{{ r.go }}" style="flex:none;width:260px;background:#ffffff;border:1px solid #e4e6ee;border-radius:10px;overflow:hidden;display:flex;flex-direction:column;cursor:pointer" style-hover="border-color:#03acee;box-shadow:0 10px 26px rgba(21,24,43,0.10)">
                 <div style="aspect-ratio:4/3;position:relative;background:#f4f5f8"><image-slot id="{{ r.relSlot }}" shape="rect" fit="contain" src="{{ r.mainImg }}" placeholder="Product shot"></image-slot></div>
@@ -753,7 +775,7 @@ image-slot[src]::part(ring){display:none}
     </div>
   </div>
   <div style="border-top:1px solid rgba(255,255,255,0.1)">
-    <div style="max-width:1280px;margin:0 auto;padding:18px 24px;font-size:13px;color:#8a8ea3">Copyright © 2026 Al Sughra Building Materials. All rights reserved.</div>
+    <div style="max-width:1280px;margin:0 auto;padding:18px 24px;font-size:13px;color:#8a8ea3;display:flex;flex-wrap:wrap;justify-content:space-between;gap:6px 24px"><span>Copyright © 2026 Al Sughra Building Materials. All rights reserved.</span><span>Powered by LUNAD Digital Portal LLC</span></div>
   </div>
 </footer>
 <!-- Image pop-up (home gallery) -->
@@ -794,6 +816,13 @@ image-slot[src]::part(ring){display:none}
   </div>
 </div>
 </sc-if>
+<!-- Mobile sticky product CTA -->
+<sc-if value="{{ stickyCta }}">
+<div class="sticky-cta" style="position:fixed;left:0;right:0;bottom:0;z-index:900;display:none;gap:10px;padding:10px 16px calc(10px + env(safe-area-inset-bottom));background:#ffffff;border-top:1px solid #e4e6ee;box-shadow:0 -6px 18px rgba(21,24,43,0.10)">
+  <button onClick="{{ openQuote }}" style="border:none;background:#03acee;color:#ffffff;padding:13px 10px;flex:1;white-space:nowrap;border-radius:6px;font-weight:700;font-size:15px;cursor:pointer" style-hover="background:#0293cc">Send enquiry</button>
+  <a href="{{ curProd.waLink }}" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:10px;border:none;background:#4cc247;color:#ffffff;padding:13px 10px;flex:1;justify-content:center;white-space:nowrap;border-radius:6px;font-weight:500;font-size:15px;box-shadow:0 4px 12px rgba(0,0,0,0.12)" style-hover="background:#3fb03a;color:#ffffff"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.870.12.57-.08 1.76-.72 2.01-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35zM12.04 21.8h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.9-9.88 2.64 0 5.12 1.03 6.99 2.9a9.82 9.82 0 0 1 2.89 6.99c0 5.45-4.44 9.88-9.89 9.88zm8.41-18.3A11.82 11.82 0 0 0 12.040 0C5.5 0 .17 5.33.16 11.88c0 2.1.55 4.14 1.59 5.94L.06 24l6.3-1.65a11.86 11.86 0 0 0 5.68 1.45h.01c6.55 0 11.88-5.33 11.88-11.88 0-3.17-1.24-6.16-3.48-8.4z"/></svg>Message Us</a>
+</div>
+</sc-if>
 <!-- Floating WhatsApp button (all pages except product details) -->
 <sc-if value="{{ showFloatWa }}">
 <a class="wa-float" href="https://wa.me/971506372683" target="_blank" rel="noopener" aria-label="Chat with us on WhatsApp" title="Chat with us on WhatsApp" style="position:fixed;right:clamp(16px,2.5vw,28px);bottom:clamp(16px,2.5vw,28px);z-index:1000;width:60px;height:60px;border-radius:50%;background:#25d366;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(21,24,43,0.25)"><svg width="32" height="32" viewBox="0 0 24 24" fill="#ffffff" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.870.12.57-.08 1.76-.72 2.01-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35zM12.04 21.8h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.9-9.88 2.64 0 5.12 1.03 6.99 2.9a9.82 9.82 0 0 1 2.89 6.99c0 5.45-4.44 9.88-9.89 9.88zm8.41-18.3A11.82 11.82 0 0 0 12.040 0C5.5 0 .17 5.33.16 11.88c0 2.1.55 4.14 1.59 5.94L.06 24l6.3-1.65a11.86 11.86 0 0 0 5.68 1.45h.01c6.55 0 11.88-5.33 11.88-11.88 0-3.17-1.24-6.16-3.48-8.4z"/></svg></a>
@@ -802,7 +831,7 @@ image-slot[src]::part(ring){display:none}
 </x-dc>
 <script type="text/x-dc" data-dc-script>
 class Component extends DCLogic {
-  state = { mob: false, imgIdx: 0, lightbox: null, pastHero: false, page: 'home', cat: 0, prod: 'p1', menu: false, tab: 0, sent: false, quote: false, quoteSent: false, now: Date.now() };
+  state = { q: '', qFocus: false, stickyCta: false, heroOpen: false, mob: false, imgIdx: 0, lightbox: null, pastHero: false, page: 'home', cat: 0, prod: 'p1', menu: false, tab: 0, sent: false, quote: false, quoteSent: false, now: Date.now() };
   CATS = [
     { name: 'Tiling & Flooring Accessories', short: 'TILING & FLOORING', img: 'assets/img/Tiling-and-Flooring-Accessories.png', desc: 'For tile installation, floor transitions and finishing.', seo: 'Shop tiling and flooring accessories in Sharjah and across the UAE from Al Sughra Building Materials. We supply aluminium expansion cover joints, carpet profiles, stair nosing, tile leveling systems and tile trims for neat, durable tile installations, floor transitions and finishing in residential and commercial projects.', card: 'Tiling and flooring accessories in Sharjah, UAE: aluminium expansion cover joints, carpet profiles, stair nosing, tile leveling systems and tile trims for neat, durable floor and wall finishes.' },
     { name: 'Drywall, Plastering & Ceiling Systems', short: 'DRYWALL & CEILING', img: 'assets/img/Drywall-Plastering-and-Ceiling-Systems.png', desc: 'For gypsum partitions, plastering, ceilings and wall reinforcement.', seo: 'Buy drywall, plastering and ceiling systems in Sharjah, UAE. Al Sughra Building Materials supplies beads, laths and block reinforcement, ceiling tiles, fiberglass mesh, gypsum partition and ceiling accessories, and PVC beads with corner mesh for partitions, false ceilings and plastering.', card: 'Drywall, plastering and ceiling supplies in the UAE: plaster beads and laths, fiberglass mesh, ceiling tiles and gypsum partition accessories for strong partitions and crack-free walls.' },
@@ -855,16 +884,66 @@ class Component extends DCLogic {
       const hb = header ? header.getBoundingClientRect().bottom : 0;
       const past = hero ? hero.getBoundingClientRect().bottom <= hb : window.scrollY > 10;
       if (past !== this.state.pastHero) this.setState({ pastHero: past });
+      const cta = document.querySelector('.prod-cta');
+      const sticky = !!cta && window.matchMedia('(max-width:768px)').matches && cta.getBoundingClientRect().bottom < hb;
+      if (sticky !== this.state.stickyCta) this.setState({ stickyCta: sticky });
     };
     window.addEventListener('scroll', this.onScroll, { passive: true });
+    // Mobile: swipeable carousels that still auto-scroll when untouched
+    const mq = window.matchMedia('(max-width:768px)');
+    const held = new WeakMap();
+    const hold = (el, ms) => held.set(el, Date.now() + ms);
+    this._marqueeTick = () => {
+      if (mq.matches && !window.matchMedia('(prefers-reduced-motion:reduce)').matches) {
+        document.querySelectorAll('.cat-marquee').forEach((el) => {
+          if (!el._wired) {
+            el._wired = true;
+            el.addEventListener('touchstart', () => hold(el, 1e9), { passive: true });
+            el.addEventListener('touchend', () => hold(el, 2500), { passive: true });
+            el.addEventListener('touchcancel', () => hold(el, 2500), { passive: true });
+            el.addEventListener('scroll', () => { const half = el.scrollWidth / 2; if (el.scrollLeft >= half) el.scrollLeft -= half; }, { passive: true });
+          }
+          if ((held.get(el) || 0) > Date.now()) return;
+          el._pos = (el._pos == null || Math.abs(el._pos - el.scrollLeft) > 2 ? el.scrollLeft : el._pos) + 0.6;
+          const half = el.scrollWidth / 2;
+          if (half > 0 && el._pos >= half) el._pos -= half;
+          el.scrollLeft = el._pos;
+        });
+      }
+      this._raf = requestAnimationFrame(this._marqueeTick);
+    };
+    this._raf = requestAnimationFrame(this._marqueeTick);
     this.onScroll();
   }
-  componentWillUnmount() { clearInterval(this.t); window.removeEventListener('scroll', this.onScroll); }
-  go(page, extra) { this.setState({ page, mob: false, imgIdx: 0, menu: false, sent: false, pastHero: false, ...(extra || {}) }); window.scrollTo(0, 0); setTimeout(() => this.onScroll && this.onScroll(), 50); }
+  componentWillUnmount() { cancelAnimationFrame(this._raf); clearInterval(this.t); window.removeEventListener('scroll', this.onScroll); }
+  go(page, extra) { this.setState({ page, q: '', qFocus: false, stickyCta: false, mob: false, imgIdx: 0, menu: false, sent: false, pastHero: false, ...(extra || {}) }); window.scrollTo(0, 0); setTimeout(() => this.onScroll && this.onScroll(), 50); }
   item(p) {
     const k = this.CATS[p.c];
     return { ...p, imgs: p.imgs || [], mainImg: (p.imgs || [])[0] || '', slot: 'prod-' + p.id, catShort: k.short, catName: k.name, go: () => this.go('product', { prod: p.id, cat: p.c }), hasPrice: !!p.price, off: p.price && p.was ? Math.round((1 - parseFloat(p.price) / parseFloat(p.was)) * 100) : 0, r: p.r || 0, n: p.n || 0, sold: p.sold || 0,
       soldPct: p.sold + '%', stock: 'Sold ' + p.sold + '% · limited stock', stars: '★★★★★'.slice(0, p.r) + '☆☆☆☆☆'.slice(0, 5 - p.r), reviews: p.n };
+  }
+  searchVals(s) {
+    const q = (s.q || '').trim().toLowerCase();
+    const words = q.split(/\s+/).filter(Boolean).map(w => w.replace(/&/g, 'and'));
+    const norm = t => (t || '').toLowerCase().replace(/&/g, 'and');
+    const hit = (text) => words.every(w => norm(text).includes(w));
+    const results = [];
+    if (words.length) {
+      this.CATS.forEach((c, i) => { if (hit(c.name + ' ' + (c.desc || ''))) results.push({ name: c.name, kind: 'Category', img: c.img, score: hit(c.name) ? 0 : 2, go: () => this.go('category', { cat: i }) }); });
+      this.PRODUCTS.forEach(p => {
+        const c = this.CATS[p.c];
+        if (hit(p.name + ' ' + c.name + ' ' + (p.use || '') + ' ' + (p.mat || ''))) results.push({ name: p.name, kind: 'Product · ' + c.name, img: (p.imgs || [])[0] || c.img, score: hit(p.name) ? 1 : 3, go: () => this.go('product', { prod: p.id, cat: p.c }) });
+      });
+      results.sort((a, b) => a.score - b.score);
+    }
+    const list = results.slice(0, 8);
+    return {
+      q: s.q || '', searchResults: list, searchOpen: !!(s.qFocus && words.length), searchEmpty: words.length > 0 && list.length === 0,
+      onSearch: (e) => this.setState({ q: e.target.value, qFocus: true }),
+      searchFocus: () => this.setState({ qFocus: true }),
+      searchBlur: () => setTimeout(() => this.setState({ qFocus: false }), 150),
+      searchKey: (e) => { if (e.key === 'Enter' && list[0]) { e.preventDefault(); list[0].go(); e.target.blur(); } if (e.key === 'Escape') this.setState({ qFocus: false }); }
+    };
   }
   productVals(all, s) {
     const p = all.find(x => x.id === s.prod) || all[0];
@@ -903,7 +982,7 @@ class Component extends DCLogic {
       goHome: () => this.go('home'), goAbout: () => this.go('about'), goProducts: () => this.go('products'),
       goGallery: () => this.go('gallery'), goContact: () => this.go('contact'),
       goCat0: () => this.go('category', { cat: 0 }), goCat1: () => this.go('category', { cat: 1 }),
-      mobOpen: s.mob, toggleMob: () => this.setState({ mob: !s.mob }), menuOpen: s.menu, openMenu: () => this.setState({ menu: true }), closeMenu: () => this.setState({ menu: false }),
+      heroCls: s.heroOpen ? 'open' : '', heroExpand: () => this.setState({ heroOpen: true }), mobOpen: s.mob, toggleMob: () => this.setState({ mob: !s.mob }), menuOpen: s.menu, openMenu: () => this.setState({ menu: true }), closeMenu: () => this.setState({ menu: false }),
       cats: this.CATS.map((c, i) => ({ ...c, products: this.PRODUCTS.filter(p => p.c === i).map(p => p.name).join(' · '), num: i + 1, slot: 'cat-' + i, thumbSlot: 'menu-cat-' + i, active: s.cat === i, navActive: (s.page === 'category' || s.page === 'product') && s.cat === i, go: () => this.go('category', { cat: i }), cardSlot: 'prodcat-' + i })),
       curCat: this.CATS[s.cat],
       otherCats: [0, 1].flatMap(k => this.CATS.map((c, i) => ({ ...c, i })).filter(c => c.i !== s.cat).map(c => ({ ...c, slot: 'othercat-' + c.i + '-' + k, go: () => this.go('category', { cat: c.i }) }))),
@@ -917,8 +996,9 @@ class Component extends DCLogic {
       featured: ['d4', 'p1', 's1'].map(id => all.find(p => p.id === id)).map(p => ({ ...p, homeSlot: 'home-feat-' + p.id, img: p.mainImg || this.CATS[p.c].img, go: () => this.go('category', { cat: p.c }) })),
       galleryHome: [['ASBM showroom reception counter, Sharjah'], ['L-angle stainless steel tile trims display'], ['ASBM decorative profiles display'], ['Rebar spacers, metal lath and masonry accessories display'], ['Drywall profiles, corner beads and ceiling accessories display'], ['Showroom display: rubber parking products, formwork accessories and PVC drywall beads']].map(([label], i) => ({ label, img: 'assets/gallery/home-v2-' + (i + 1) + '.jpg', slot: 'home-gal2-' + i, open: () => this.setState({ lightbox: { img: 'assets/gallery/home-v2-' + (i + 1) + '.jpg', label } }) })),
       lightboxOpen: !!s.lightbox, lightbox: s.lightbox || { img: '', label: '' }, closeLightbox: () => this.setState({ lightbox: null }),
+      ...this.searchVals(s),
       sent: s.sent, send: () => this.setState({ sent: true }),
-      pastHero: s.pastHero,
+      pastHero: s.pastHero, stickyCta: s.stickyCta && s.page === 'product',
       quoteOpen: s.quote, quoteSent: s.quoteSent,
       openQuote: () => this.setState({ quote: true, quoteSent: false, menu: false }),
       closeQuote: () => this.setState({ quote: false }),
