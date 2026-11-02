@@ -25,6 +25,23 @@ input,select,textarea,button{font-family:inherit}
 .faq[open]{border-color:#03acee}
 .header-row{display:grid;grid-template-columns:1fr auto 1fr}.header-row>:first-child{justify-self:start}.header-search{justify-self:center}.header-links{justify-self:end}@media (max-width:900px){.header-row{display:flex;flex-wrap:wrap}.header-search{flex:1 1 240px;width:auto}.header-links{margin-left:auto}}
 .gallery-grid{grid-template-columns:repeat(3,minmax(0,1fr))}@media (max-width:900px){.gallery-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}}@media (max-width:560px){.gallery-grid{grid-template-columns:1fr!important}}
+@media (max-width:768px){
+.header-row{display:flex!important;flex-wrap:nowrap!important;gap:10px!important;padding:10px 16px!important}
+.hdr-logo{height:44px!important}
+.header-search{flex:1 1 auto!important;width:auto!important;min-width:0!important;height:40px!important}
+.header-links,.cat-strip{display:none!important}
+.burger{display:inline-flex!important}
+.home-hero .hero-inner{padding:28px 16px 26px!important}
+.home-hero .hero-copy{gap:12px!important;max-width:100%!important}
+.home-hero h1{font-size:26px!important;line-height:1.15!important}
+.home-hero p{font-size:14px!important;line-height:1.55!important}
+.home-hero button{padding:11px 18px!important;font-size:14px!important}
+.home-hero ul{font-size:12px!important;gap:6px 16px!important;margin:0!important}
+.home-gal{grid-template-columns:repeat(2,minmax(0,1fr))!important;grid-auto-rows:clamp(160px,46vw,260px)!important;gap:10px!important}
+.feat-grid{grid-template-columns:1fr!important;gap:14px!important}
+.feat-grid div>span:nth-of-type(1){font-size:12px!important}.feat-grid div>span:nth-of-type(2){font-size:16px!important}
+image-slot::part(image),image-slot::part(frame){touch-action:pan-x pan-y pinch-zoom!important}
+}
 .main-nav{scrollbar-width:none}.main-nav::-webkit-scrollbar{display:none}
 image-slot[src]::part(ring){display:none}
 .hov-card{transition:transform .35s cubic-bezier(.2,.7,.2,1),box-shadow .35s ease,border-color .25s ease}.hov-card:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(21,24,43,0.14)}
@@ -44,7 +61,7 @@ image-slot[src]::part(ring){display:none}
 <header style="background:#ffffff;position:sticky;top:0;z-index:100;box-shadow:0 2px 12px rgba(21,24,43,0.06)">
   <div class="header-row" style="max-width:1280px;margin:0 auto;padding:14px 24px;align-items:center;gap:16px 32px">
     <div onClick="{{ goHome }}" style="display:flex;align-items:center;cursor:pointer">
-      <img src="assets/asbm-logo.webp" alt="Al Sughra Building Materials (ASBM) logo" style="height:80px;width:auto;display:block">
+      <img class="hdr-logo" src="assets/asbm-logo.webp" alt="Al Sughra Building Materials (ASBM) logo" style="height:80px;width:auto;display:block">
     </div>
     <label class="header-search" style="width:392px;max-width:100%;display:flex;align-items:center;gap:10px;border:1px solid #d3d6e2;border-radius:999px;padding:0 16px;height:42px;background:#ffffff;cursor:text">
       <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#5b6078" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
@@ -55,9 +72,21 @@ image-slot[src]::part(ring){display:none}
       <div onClick="{{ goGallery }}" style="position:relative;padding:8px 0;font-size:15px;font-weight:500;color:#15182b;cursor:pointer;white-space:nowrap" style-hover="color:#03acee">Gallery<sc-if value="{{ isGallery }}"><span style="position:absolute;left:0;right:0;bottom:2px;height:2px;background:#03acee;border-radius:2px"></span></sc-if></div>
       <div onClick="{{ goContact }}" style="position:relative;padding:8px 0;font-size:15px;font-weight:500;color:#15182b;cursor:pointer;white-space:nowrap" style-hover="color:#03acee">Contact Us<sc-if value="{{ isContact }}"><span style="position:absolute;left:0;right:0;bottom:2px;height:2px;background:#03acee;border-radius:2px"></span></sc-if></div>
     </nav>
+    <button class="burger" onClick="{{ toggleMob }}" aria-label="Menu" aria-expanded="{{ mobOpen }}" style="display:none;width:42px;height:42px;flex:none;border:1px solid #d3d6e2;border-radius:8px;background:#ffffff;color:#15182b;cursor:pointer;align-items:center;justify-content:center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
   </div>
+  <sc-if value="{{ mobOpen }}">
+  <nav class="mob-menu" aria-label="Mobile menu" style="border-top:1px solid #6ac2e8;background:#ffffff;padding:8px 16px 16px;max-height:calc(100vh - 120px);overflow-y:auto">
+    <div onClick="{{ goProducts }}" style="padding:12px 0;font-size:16px;font-weight:700;color:#15182b;cursor:pointer;border-bottom:1px solid #eceef4">Products</div>
+    <sc-for list="{{ cats }}" as="c" hint-placeholder-count="5">
+      <div onClick="{{ c.go }}" style="padding:11px 0 11px 14px;font-size:14px;color:#3b3f57;cursor:pointer;border-bottom:1px solid #f2f4f7">{{ c.name }}</div>
+    </sc-for>
+    <div onClick="{{ goAbout }}" style="padding:12px 0;font-size:16px;font-weight:600;color:#15182b;cursor:pointer;border-bottom:1px solid #eceef4">About Us</div>
+    <div onClick="{{ goGallery }}" style="padding:12px 0;font-size:16px;font-weight:600;color:#15182b;cursor:pointer;border-bottom:1px solid #eceef4">Gallery</div>
+    <div onClick="{{ goContact }}" style="padding:12px 0;font-size:16px;font-weight:600;color:#15182b;cursor:pointer">Contact Us</div>
+  </nav>
+  </sc-if>
   <!-- Nav -->
-  <nav aria-label="Main" style="position:relative;background:#ffffff;border-top:1px solid #6ac2e8">
+  <nav class="cat-strip" aria-label="Main" style="position:relative;background:#ffffff;border-top:1px solid #6ac2e8">
     <sc-if value="{{ pastHero }}"><span aria-hidden="true" style="position:absolute;left:0;right:0;bottom:0;height:1px;background:#6ac2e8;pointer-events:none"></span></sc-if>
     <div class="main-nav" style="max-width:1280px;margin:0 auto;padding:0 24px;display:flex;flex-wrap:nowrap;align-items:stretch;justify-content:space-between;column-gap:12px;overflow-x:auto">
       <sc-for list="{{ cats }}" as="c" hint-placeholder-count="5">
@@ -71,13 +100,13 @@ image-slot[src]::part(ring){display:none}
 
 <!-- HOME -->
 <sc-if value="{{ isHome }}" hint-placeholder-val="{{ true }}">
-<section data-hero aria-label="Building materials supplier in Sharjah, UAE" style="position:relative;min-height:0;display:flex;align-items:center;overflow:hidden;background:#15182b">
+<section class="home-hero" data-hero aria-label="Building materials supplier in Sharjah, UAE" style="position:relative;min-height:0;display:flex;align-items:center;overflow:hidden;background:#15182b">
   <div style="position:absolute;inset:0">
     <image-slot id="home-hero-wide" shape="rect" src="assets/img/hero-products.jpg" placeholder="Wide hero — building materials and products"></image-slot>
   </div>
   <div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(21,24,43,0.92) 0%,rgba(21,24,43,0.78) 45%,rgba(21,24,43,0.2) 100%);pointer-events:none"></div>
-  <div style="position:relative;width:100%;max-width:1280px;margin:0 auto;padding:56px 24px 48px;pointer-events:none">
-    <div style="max-width:680px;display:flex;flex-direction:column;gap:22px;color:#ffffff">
+  <div class="hero-inner" style="position:relative;width:100%;max-width:1280px;margin:0 auto;padding:56px 24px 48px;pointer-events:none">
+    <div class="hero-copy" style="max-width:680px;display:flex;flex-direction:column;gap:22px;color:#ffffff">
       <h1 style="margin:0;font-size:52px;line-height:1.05;font-weight:800;text-wrap:pretty">Building Materials Supplier in Sharjah &amp; across the UAE</h1>
       <p style="margin:0;font-size:18px;line-height:1.6;color:#e4e6ee;text-wrap:pretty">Al Sughra Building Materials Trading LLC, with 20+ years of excellence in building materials, supplies tiling and flooring accessories, drywall, plastering and ceiling systems, concrete and masonry accessories, sealing, jointing and protection materials, and scaffolding and architectural products to contractors, fit-out companies and builders across the UAE and the Middle East.</p>
       <div style="display:flex;gap:12px;flex-wrap:wrap;pointer-events:auto">
@@ -173,7 +202,7 @@ image-slot[src]::part(ring){display:none}
           </div>
           <a onClick="{{ goProducts }}" style="font-size:15px;font-weight:700;color:#03acee;cursor:pointer;text-decoration:underline;text-underline-offset:4px" style-hover="color:#f11a2b">View all products →</a>
         </div>
-        <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(8px,1.6vw,20px)">
+        <div class="feat-grid" style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(8px,1.6vw,20px)">
           <sc-for list="{{ featured }}" as="p" hint-placeholder-count="3">
             <div class="hov-card" onClick="{{ p.go }}" style="border:1px solid #e4e6ee;border-radius:8px;overflow:hidden;display:flex;flex-direction:column;cursor:pointer;background:#ffffff" style-hover="border-color:#03acee;box-shadow:0 8px 24px rgba(21,24,43,0.08)">
               <div style="aspect-ratio:3/2;position:relative;background:#f4f5f8"><image-slot id="{{ p.homeSlot }}" shape="rect" src="{{ p.img }}" placeholder="Product shot"></image-slot></div>
@@ -773,7 +802,7 @@ image-slot[src]::part(ring){display:none}
 </x-dc>
 <script type="text/x-dc" data-dc-script>
 class Component extends DCLogic {
-  state = { imgIdx: 0, lightbox: null, pastHero: false, page: 'home', cat: 0, prod: 'p1', menu: false, tab: 0, sent: false, quote: false, quoteSent: false, now: Date.now() };
+  state = { mob: false, imgIdx: 0, lightbox: null, pastHero: false, page: 'home', cat: 0, prod: 'p1', menu: false, tab: 0, sent: false, quote: false, quoteSent: false, now: Date.now() };
   CATS = [
     { name: 'Tiling & Flooring Accessories', short: 'TILING & FLOORING', img: 'assets/img/Tiling-and-Flooring-Accessories.png', desc: 'For tile installation, floor transitions and finishing.', seo: 'Shop tiling and flooring accessories in Sharjah and across the UAE from Al Sughra Building Materials. We supply aluminium expansion cover joints, carpet profiles, stair nosing, tile leveling systems and tile trims for neat, durable tile installations, floor transitions and finishing in residential and commercial projects.', card: 'Tiling and flooring accessories in Sharjah, UAE: aluminium expansion cover joints, carpet profiles, stair nosing, tile leveling systems and tile trims for neat, durable floor and wall finishes.' },
     { name: 'Drywall, Plastering & Ceiling Systems', short: 'DRYWALL & CEILING', img: 'assets/img/Drywall-Plastering-and-Ceiling-Systems.png', desc: 'For gypsum partitions, plastering, ceilings and wall reinforcement.', seo: 'Buy drywall, plastering and ceiling systems in Sharjah, UAE. Al Sughra Building Materials supplies beads, laths and block reinforcement, ceiling tiles, fiberglass mesh, gypsum partition and ceiling accessories, and PVC beads with corner mesh for partitions, false ceilings and plastering.', card: 'Drywall, plastering and ceiling supplies in the UAE: plaster beads and laths, fiberglass mesh, ceiling tiles and gypsum partition accessories for strong partitions and crack-free walls.' },
@@ -831,7 +860,7 @@ class Component extends DCLogic {
     this.onScroll();
   }
   componentWillUnmount() { clearInterval(this.t); window.removeEventListener('scroll', this.onScroll); }
-  go(page, extra) { this.setState({ page, imgIdx: 0, menu: false, sent: false, pastHero: false, ...(extra || {}) }); window.scrollTo(0, 0); setTimeout(() => this.onScroll && this.onScroll(), 50); }
+  go(page, extra) { this.setState({ page, mob: false, imgIdx: 0, menu: false, sent: false, pastHero: false, ...(extra || {}) }); window.scrollTo(0, 0); setTimeout(() => this.onScroll && this.onScroll(), 50); }
   item(p) {
     const k = this.CATS[p.c];
     return { ...p, imgs: p.imgs || [], mainImg: (p.imgs || [])[0] || '', slot: 'prod-' + p.id, catShort: k.short, catName: k.name, go: () => this.go('product', { prod: p.id, cat: p.c }), hasPrice: !!p.price, off: p.price && p.was ? Math.round((1 - parseFloat(p.price) / parseFloat(p.was)) * 100) : 0, r: p.r || 0, n: p.n || 0, sold: p.sold || 0,
@@ -874,7 +903,7 @@ class Component extends DCLogic {
       goHome: () => this.go('home'), goAbout: () => this.go('about'), goProducts: () => this.go('products'),
       goGallery: () => this.go('gallery'), goContact: () => this.go('contact'),
       goCat0: () => this.go('category', { cat: 0 }), goCat1: () => this.go('category', { cat: 1 }),
-      menuOpen: s.menu, openMenu: () => this.setState({ menu: true }), closeMenu: () => this.setState({ menu: false }),
+      mobOpen: s.mob, toggleMob: () => this.setState({ mob: !s.mob }), menuOpen: s.menu, openMenu: () => this.setState({ menu: true }), closeMenu: () => this.setState({ menu: false }),
       cats: this.CATS.map((c, i) => ({ ...c, products: this.PRODUCTS.filter(p => p.c === i).map(p => p.name).join(' · '), num: i + 1, slot: 'cat-' + i, thumbSlot: 'menu-cat-' + i, active: s.cat === i, navActive: (s.page === 'category' || s.page === 'product') && s.cat === i, go: () => this.go('category', { cat: i }), cardSlot: 'prodcat-' + i })),
       curCat: this.CATS[s.cat],
       otherCats: [0, 1].flatMap(k => this.CATS.map((c, i) => ({ ...c, i })).filter(c => c.i !== s.cat).map(c => ({ ...c, slot: 'othercat-' + c.i + '-' + k, go: () => this.go('category', { cat: c.i }) }))),
