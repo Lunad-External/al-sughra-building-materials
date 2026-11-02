@@ -2,6 +2,12 @@
 <html>
 <head>
 <meta charset="utf-8">
+<script>
+/* Work out the site's root folder (works at a domain root or under /repo-name/ on GitHub Pages) and set <base> so assets load from any clean URL */
+(function(){var known={'home':1,'about-us':1,'gallery':1,'contact-us':1,'products':1,'index.html':1,'404.html':1};
+var segs=location.pathname.split('/');var cut=segs.length-1;for(var i=1;i<segs.length;i++){if(known[segs[i]]){cut=i;break;}}
+var base=segs.slice(0,cut).join('/')+'/';window.__SITE_BASE=base;document.write('<base href="'+base+'">');})();
+</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Al Sughra Building Materials Trading LLC | Building Materials Supplier in Sharjah, UAE</title>
 <meta name="description" content="Al Sughra Building Materials (ASBM), Sharjah: tiling and flooring accessories, drywall and ceiling systems, concrete and masonry accessories, sealing materials, scaffolding and PU decorative products. Bulk supply across the UAE.">
@@ -31,6 +37,8 @@ input,select,textarea,button{font-family:inherit}
 .header-search{flex:1 1 auto!important;width:auto!important;min-width:0!important;height:40px!important}
 .header-links,.cat-strip{display:none!important}
 .burger{display:inline-flex!important}
+.hero-p{display:none!important}.hero-pm{display:block!important}
+.home-hero.hero-open{min-height:0!important}.home-hero.hero-open .hero-copy>div{margin-top:0!important;padding-top:24px!important}
 .home-hero{min-height:456px!important;align-items:stretch!important}.home-hero .hero-inner{padding:36px 16px 28px!important;display:flex!important;flex-direction:column!important}
 .home-hero .hero-copy{flex:1 1 auto!important}.home-hero .hero-copy>div{margin-top:auto!important;padding-top:40px}.home-hero ul{margin-top:6px!important}
 .home-hero .hero-copy{gap:12px!important;max-width:100%!important}
@@ -50,7 +58,7 @@ input,select,textarea,button{font-family:inherit}
 .feat-grid div>span:nth-of-type(1){font-size:12px!important}.feat-grid div>span:nth-of-type(2){font-size:16px!important}
 image-slot::part(image),image-slot::part(frame){touch-action:pan-x pan-y pinch-zoom!important}
 }
-.hero-p .read-more,.hero-p .hero-dots{display:none}@media (max-width:768px){.hero-p:not(.open) .read-more,.hero-p:not(.open) .hero-dots{display:inline}.hero-p:not(.open) .hero-more{display:none}}
+.hero-p .read-more,.hero-p .hero-dots{display:none}@media (max-width:768px){.hero-p:not(.open) .hero-dots{display:inline}.hero-p:not(.open) .read-more{display:table;margin-top:6px}.hero-p:not(.open) .hero-more{display:none}}
 .main-nav{scrollbar-width:none}.main-nav::-webkit-scrollbar{display:none}
 image-slot[src]::part(ring){display:none}
 .hov-card{transition:transform .35s cubic-bezier(.2,.7,.2,1),box-shadow .35s ease,border-color .25s ease}.hov-card:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(21,24,43,0.14)}
@@ -123,7 +131,7 @@ image-slot[src]::part(ring){display:none}
 
 <!-- HOME -->
 <sc-if value="{{ isHome }}" hint-placeholder-val="{{ true }}">
-<section class="home-hero" data-hero aria-label="Building materials supplier in Sharjah, UAE" style="position:relative;min-height:0;display:flex;align-items:center;overflow:hidden;background:#15182b">
+<section class="home-hero {{ heroSecCls }}" data-hero aria-label="Building materials supplier in Sharjah, UAE" style="position:relative;min-height:0;display:flex;align-items:center;overflow:hidden;background:#15182b">
   <div style="position:absolute;inset:0">
     <image-slot id="home-hero-wide" shape="rect" src="assets/img/hero-products.jpg" placeholder="Wide hero — building materials and products"></image-slot>
   </div>
@@ -132,6 +140,10 @@ image-slot[src]::part(ring){display:none}
     <div class="hero-copy" style="max-width:680px;display:flex;flex-direction:column;gap:22px;color:#ffffff">
       <h1 style="margin:0;font-size:52px;line-height:1.05;font-weight:800;text-wrap:pretty">Building Materials Supplier in Sharjah &amp; across the UAE</h1>
       <p class="hero-p {{ heroCls }}" style="margin:0;font-size:18px;line-height:1.6;color:#e4e6ee;text-wrap:pretty">Al Sughra Building Materials Trading LLC, with 20+ years of excellence in building materials<span class="hero-dots">… </span><a class="read-more" onClick="{{ heroExpand }}" style="pointer-events:auto;color:#6ac2e8;font-weight:600;text-decoration:underline;text-underline-offset:3px;cursor:pointer;white-space:nowrap">Read more</a><span class="hero-more">, supplies tiling and flooring accessories, drywall, plastering and ceiling systems, concrete and masonry accessories, sealing, jointing and protection materials, and scaffolding and architectural products to contractors, fit-out companies and builders across the UAE and the Middle East.</span></p>
+      <p class="hero-pm" style="display:none;margin:0;font-size:14px;line-height:1.55;color:#e4e6ee">
+        <sc-for list="{{ heroLines }}" as="l" hint-placeholder-count="3"><span style="display:block;white-space:nowrap">{{ l.t }}</span></sc-for>
+        <sc-if value="{{ heroShowMore }}"><a onClick="{{ heroExpand }}" style="display:inline-block;margin-top:6px;pointer-events:auto;color:#6ac2e8;font-weight:600;text-decoration:underline;text-underline-offset:3px;cursor:pointer">Read more</a></sc-if>
+      </p>
       <div style="display:flex;gap:12px;flex-wrap:wrap;pointer-events:auto">
         <button onClick="{{ goProducts }}" style="border:none;background:#f11a2b;color:#ffffff;padding:16px 30px;border-radius:6px;font-weight:700;font-size:16px;cursor:pointer" style-hover="background:#d10f1f">Shop products</button>
         <button onClick="{{ openQuote }}" style="border:1.5px solid #ffffff;background:transparent;color:#ffffff;padding:16px 30px;border-radius:6px;font-weight:700;font-size:16px;cursor:pointer" style-hover="background:#ffffff;color:#15182b">Bulk enquiry</button>
@@ -878,6 +890,15 @@ class Component extends DCLogic {
     { label: "Drywall profiles, corner beads and ceiling accessories", img: 'assets/gallery/gallery-15.jpg' }
   ];
   componentDidMount() {
+    // Clean URLs (only on the live site, not inside the design editor)
+    this.routing = window.top === window && /^https?:$/.test(location.protocol);
+    if (this.routing) {
+      const r = this.parseUrl();
+      this.go(r.page, r, true);
+      history.replaceState(null, '', this.urlFor(r.page, r.cat ?? this.state.cat, r.prod ?? this.state.prod));
+      this.onPop = () => { const r2 = this.parseUrl(); this.go(r2.page, r2, true); };
+      window.addEventListener('popstate', this.onPop);
+    }
     this.t = setInterval(() => this.setState({ now: Date.now() }), 1000);
     this.onScroll = () => {
       const header = document.querySelector('header');
@@ -916,8 +937,49 @@ class Component extends DCLogic {
     this._raf = requestAnimationFrame(this._marqueeTick);
     this.onScroll();
   }
-  componentWillUnmount() { cancelAnimationFrame(this._raf); clearInterval(this.t); window.removeEventListener('scroll', this.onScroll); }
-  go(page, extra) { this.setState({ page, q: '', qFocus: false, stickyCta: false, mob: false, imgIdx: 0, menu: false, sent: false, pastHero: false, ...(extra || {}) }); window.scrollTo(0, 0); setTimeout(() => this.onScroll && this.onScroll(), 50); }
+  componentWillUnmount() { if (this.onPop) window.removeEventListener('popstate', this.onPop); cancelAnimationFrame(this._raf); clearInterval(this.t); window.removeEventListener('scroll', this.onScroll); }
+  go(page, extra, fromUrl) {
+    const next = { page, q: '', qFocus: false, stickyCta: false, mob: false, imgIdx: 0, menu: false, sent: false, pastHero: false, ...(extra || {}) };
+    this.setState(next); window.scrollTo(0, 0); setTimeout(() => this.onScroll && this.onScroll(), 50);
+    if (this.routing) {
+      const url = this.urlFor(next.page, next.cat ?? this.state.cat, next.prod ?? this.state.prod);
+      if (!fromUrl && url !== location.pathname) history.pushState(null, '', url);
+      this.setTitle(next.page, next.cat ?? this.state.cat, next.prod ?? this.state.prod);
+    }
+  }
+  slug(t) { return String(t || '').toLowerCase().replace(/&/g, ' and ').replace(/[^a-z0-9]+/g, '-').replace(/-+/g, '-').replace(/^-|-$/g, ''); }
+  urlFor(page, cat, prod) {
+    const base = window.__SITE_BASE || '/';
+    const c = this.CATS[cat] || this.CATS[0];
+    const p = this.PRODUCTS.find(x => x.id === prod);
+    const map = { home: 'home', about: 'about-us', gallery: 'gallery', contact: 'contact-us', products: 'products' };
+    if (page === 'category') return base + 'products/' + this.slug(c.name);
+    if (page === 'product' && p) return base + 'products/' + this.slug(this.CATS[p.c].name) + '/' + this.slug(p.name);
+    return base + (map[page] || 'home');
+  }
+  parseUrl() {
+    const base = window.__SITE_BASE || '/';
+    let rest = location.pathname.startsWith(base) ? location.pathname.slice(base.length) : location.pathname.replace(/^\//, '');
+    const seg = rest.split('/').filter(Boolean).map(x => decodeURIComponent(x).toLowerCase());
+    const pages = { '': 'home', 'home': 'home', 'index.html': 'home', 'about-us': 'about', 'gallery': 'gallery', 'contact-us': 'contact', 'products': 'products' };
+    if (seg[0] === 'products' && seg[1]) {
+      const ci = this.CATS.findIndex(c => this.slug(c.name) === seg[1]);
+      if (ci < 0) return { page: 'products' };
+      if (seg[2]) {
+        const p = this.PRODUCTS.find(x => x.c === ci && this.slug(x.name) === seg[2]);
+        if (p) return { page: 'product', cat: ci, prod: p.id };
+      }
+      return { page: 'category', cat: ci };
+    }
+    return { page: pages[seg[0] || ''] || 'home' };
+  }
+  setTitle(page, cat, prod) {
+    const brand = 'Al Sughra Building Materials';
+    const c = this.CATS[cat]; const p = this.PRODUCTS.find(x => x.id === prod);
+    const t = { home: 'Building Materials Supplier in Sharjah, UAE | ' + brand, about: 'About Us | ' + brand, gallery: 'Gallery | ' + brand, contact: 'Contact Us | ' + brand, products: 'Products | ' + brand,
+      category: (c ? c.name : 'Products') + ' in Sharjah, UAE | ' + brand, product: (p ? p.name : 'Product') + ' | ' + brand }[page];
+    if (t) document.title = t;
+  }
   item(p) {
     const k = this.CATS[p.c];
     return { ...p, imgs: p.imgs || [], mainImg: (p.imgs || [])[0] || '', slot: 'prod-' + p.id, catShort: k.short, catName: k.name, go: () => this.go('product', { prod: p.id, cat: p.c }), hasPrice: !!p.price, off: p.price && p.was ? Math.round((1 - parseFloat(p.price) / parseFloat(p.was)) * 100) : 0, r: p.r || 0, n: p.n || 0, sold: p.sold || 0,
@@ -983,7 +1045,12 @@ class Component extends DCLogic {
       goHome: () => this.go('home'), goAbout: () => this.go('about'), goProducts: () => this.go('products'),
       goGallery: () => this.go('gallery'), goContact: () => this.go('contact'),
       goCat0: () => this.go('category', { cat: 0 }), goCat1: () => this.go('category', { cat: 1 }),
-      heroCls: s.heroOpen ? 'open' : '', heroExpand: () => this.setState({ heroOpen: true }), mobOpen: s.mob, toggleMob: () => this.setState({ mob: !s.mob }), menuOpen: s.menu, openMenu: () => this.setState({ menu: true }), closeMenu: () => this.setState({ menu: false }),
+      heroCls: s.heroOpen ? 'open' : '', heroShowMore: !s.heroOpen, heroSecCls: s.heroOpen ? 'hero-open' : '', heroLines: (() => {
+        const full = 'Al Sughra Building Materials Trading LLC, with 20+ years of excellence in building materials, supplies tiling and flooring accessories, drywall, plastering and ceiling systems, concrete and masonry accessories, sealing, jointing and protection materials, and scaffolding and architectural products to contractors, fit-out companies and builders across the UAE and the Middle East.';
+        const short = 'Al Sughra Building Materials Trading LLC, with 20+ years of excellence in building materials…';
+        const w = (s.heroOpen ? full : short).split(' '); const out = [];
+        for (let i = 0; i < w.length; i += 5) out.push({ t: w.slice(i, i + 5).join(' ') });
+        return out; })(), heroExpand: () => this.setState({ heroOpen: true }), mobOpen: s.mob, toggleMob: () => this.setState({ mob: !s.mob }), menuOpen: s.menu, openMenu: () => this.setState({ menu: true }), closeMenu: () => this.setState({ menu: false }),
       cats: this.CATS.map((c, i) => ({ ...c, products: this.PRODUCTS.filter(p => p.c === i).map(p => p.name).join(' · '), num: i + 1, slot: 'cat-' + i, thumbSlot: 'menu-cat-' + i, active: s.cat === i, navActive: (s.page === 'category' || s.page === 'product') && s.cat === i, go: () => this.go('category', { cat: i }), cardSlot: 'prodcat-' + i })),
       curCat: this.CATS[s.cat],
       otherCats: [0, 1].flatMap(k => this.CATS.map((c, i) => ({ ...c, i })).filter(c => c.i !== s.cat).map(c => ({ ...c, slot: 'othercat-' + c.i + '-' + k, go: () => this.go('category', { cat: c.i }) }))),

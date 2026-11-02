@@ -1,0 +1,1079 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<script>
+/* Work out the site's root folder (works at a domain root or under /repo-name/ on GitHub Pages) and set <base> so assets load from any clean URL */
+(function(){var known={'home':1,'about-us':1,'gallery':1,'contact-us':1,'products':1,'index.html':1,'404.html':1};
+var segs=location.pathname.split('/');var cut=segs.length-1;for(var i=1;i<segs.length;i++){if(known[segs[i]]){cut=i;break;}}
+var base=segs.slice(0,cut).join('/')+'/';window.__SITE_BASE=base;document.write('<base href="'+base+'">');})();
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Al Sughra Building Materials Trading LLC | Building Materials Supplier in Sharjah, UAE</title>
+<meta name="description" content="Al Sughra Building Materials (ASBM), Sharjah: tiling and flooring accessories, drywall and ceiling systems, concrete and masonry accessories, sealing materials, scaffolding and PU decorative products. Bulk supply across the UAE.">
+<link rel="icon" href="assets/asbm-logo.webp">
+<script>window.__resources={"https://unpkg.com/react@18.3.1/umd/react.production.min.js":"vendor/react.production.min.js","https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js":"vendor/react-dom.production.min.js"};</script>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="./image-slot.js"></script>
+<style>
+body{margin:0;background:#ffffff;font-family:'Inter',Helvetica,Arial,sans-serif;color:#15182b;-webkit-font-smoothing:antialiased}
+a{color:#03acee;text-decoration:none}a:hover{color:#f11a2b}
+*{box-sizing:border-box}
+input,select,textarea,button{font-family:inherit}
+.faq summary{list-style:none;cursor:pointer}.faq summary::-webkit-details-marker{display:none}
+.faq .faq-plus{transition:transform .2s ease}.faq[open] .faq-plus{transform:rotate(45deg)}
+.faq[open]{border-color:#03acee}
+.header-row{display:grid;grid-template-columns:1fr auto 1fr}.header-row>:first-child{justify-self:start}.header-search{justify-self:center}.header-links{justify-self:end}@media (max-width:900px){.header-row{display:flex;flex-wrap:wrap}.header-search{flex:1 1 240px;width:auto}.header-links{margin-left:auto}}
+.gallery-grid{grid-template-columns:repeat(3,minmax(0,1fr))}@media (max-width:900px){.gallery-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}}@media (max-width:560px){.gallery-grid{grid-template-columns:1fr!important}}
+@media (max-width:768px){
+.header-row{display:flex!important;flex-wrap:nowrap!important;gap:10px!important;padding:10px 16px!important}
+.hdr-logo{height:44px!important}
+.header-search{flex:1 1 auto!important;width:auto!important;min-width:0!important;height:40px!important}
+.header-links,.cat-strip{display:none!important}
+.burger{display:inline-flex!important}
+.hero-p{display:none!important}.hero-pm{display:block!important}
+.home-hero.hero-open{min-height:0!important}.home-hero.hero-open .hero-copy>div{margin-top:0!important;padding-top:24px!important}
+.home-hero{min-height:456px!important;align-items:stretch!important}.home-hero .hero-inner{padding:36px 16px 28px!important;display:flex!important;flex-direction:column!important}
+.home-hero .hero-copy{flex:1 1 auto!important}.home-hero .hero-copy>div{margin-top:auto!important;padding-top:40px}.home-hero ul{margin-top:6px!important}
+.home-hero .hero-copy{gap:12px!important;max-width:100%!important}
+.home-hero h1{font-size:26px!important;line-height:1.15!important}
+.home-hero p{font-size:14px!important;line-height:1.55!important}
+.home-hero button{padding:11px 18px!important;font-size:14px!important}
+.home-hero ul{font-size:12px!important;gap:6px 16px!important;margin:0!important}
+.home-gal{grid-template-columns:repeat(2,minmax(0,1fr))!important;grid-auto-rows:clamp(160px,46vw,260px)!important;gap:10px!important}
+.feat-grid{grid-template-columns:1fr!important;gap:14px!important}
+.prod-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:12px!important}
+.sticky-cta{display:flex!important}
+.header-search [role=listbox]{position:fixed!important;top:68px!important;left:12px!important;right:12px!important;min-width:0!important}
+.rel-static{flex-wrap:nowrap!important;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;touch-action:pan-x pan-y;padding:6px 0 18px}.rel-static::-webkit-scrollbar{display:none}
+.prod-grid h2{font-size:14px!important}.prod-grid div>span{font-size:13px!important}
+.cat-marquee{overflow-x:auto!important;-webkit-overflow-scrolling:touch;scrollbar-width:none;touch-action:pan-x pan-y}.cat-marquee::-webkit-scrollbar{display:none}
+.cat-marquee .cat-track{animation:none!important}
+.feat-grid div>span:nth-of-type(1){font-size:12px!important}.feat-grid div>span:nth-of-type(2){font-size:16px!important}
+image-slot::part(image),image-slot::part(frame){touch-action:pan-x pan-y pinch-zoom!important}
+}
+.hero-p .read-more,.hero-p .hero-dots{display:none}@media (max-width:768px){.hero-p:not(.open) .hero-dots{display:inline}.hero-p:not(.open) .read-more{display:table;margin-top:6px}.hero-p:not(.open) .hero-more{display:none}}
+.main-nav{scrollbar-width:none}.main-nav::-webkit-scrollbar{display:none}
+image-slot[src]::part(ring){display:none}
+.hov-card{transition:transform .35s cubic-bezier(.2,.7,.2,1),box-shadow .35s ease,border-color .25s ease}.hov-card:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(21,24,43,0.14)}
+.hov-card image-slot{transition:transform .6s cubic-bezier(.2,.7,.2,1)}.hov-card:hover image-slot{transform:scale(1.06)}
+.cat-marquee{padding:10px 0 22px}
+@media (prefers-reduced-motion:reduce){.hov-card,.hov-card image-slot{transition:none}.hov-card:hover,.hov-card:hover image-slot{transform:none}}
+.home-cat{transition:grid-template-columns .35s ease,border-color .2s,box-shadow .2s}.home-cat:hover{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+.home-cat .cat-full{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;background:#ffffff;opacity:0;transition:opacity .3s ease;pointer-events:none;z-index:1}.home-cat:hover .cat-full{opacity:1}
+.cat-marquee{overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 3%,#000 97%,transparent);mask-image:linear-gradient(90deg,transparent,#000 3%,#000 97%,transparent)}.cat-track{display:flex;gap:20px;width:max-content;animation:catscroll 28s linear infinite}.cat-marquee:hover .cat-track{animation-play-state:paused}@keyframes catscroll{to{transform:translateX(calc(-50% - 10px))}}@media (prefers-reduced-motion:reduce){.cat-track{animation:none}.cat-marquee{overflow-x:auto}}
+.cat-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}@media (max-width:640px){.cat-grid{grid-template-columns:1fr}}
+.wa-float{transition:transform .2s ease,box-shadow .2s ease}.wa-float:hover{transform:scale(1.08);box-shadow:0 12px 30px rgba(37,211,102,0.45)}
+</style>
+</helmet>
+<div style="min-height:100vh;display:flex;flex-direction:column">
+
+<!-- Header -->
+<header style="background:#ffffff;position:sticky;top:0;z-index:100;box-shadow:0 2px 12px rgba(21,24,43,0.06)">
+  <div class="header-row" style="max-width:1280px;margin:0 auto;padding:14px 24px;align-items:center;gap:16px 32px">
+    <div onClick="{{ goHome }}" style="display:flex;align-items:center;cursor:pointer">
+      <img class="hdr-logo" src="assets/asbm-logo.webp" alt="Al Sughra Building Materials (ASBM) logo" style="height:80px;width:auto;display:block">
+    </div>
+    <label class="header-search" style="position:relative;width:392px;max-width:100%;display:flex;align-items:center;gap:10px;border:1px solid #d3d6e2;border-radius:999px;padding:0 16px;height:42px;background:#ffffff;cursor:text">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#5b6078" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <input type="search" aria-label="Search products and categories" placeholder="Search for products" value="{{ q }}" onInput="{{ onSearch }}" onFocus="{{ searchFocus }}" onBlur="{{ searchBlur }}" onKeyDown="{{ searchKey }}" autocomplete="off" style="flex:1;min-width:0;border:none;outline:none;font-size:14px;color:#15182b;background:transparent">
+      <sc-if value="{{ searchOpen }}">
+      <div role="listbox" aria-label="Search results" style="position:absolute;top:calc(100% + 8px);left:0;right:0;min-width:280px;z-index:300;background:#ffffff;border:1px solid #e4e6ee;border-radius:12px;box-shadow:0 18px 40px rgba(21,24,43,0.16);padding:6px;max-height:min(420px,60vh);overflow-y:auto;cursor:default">
+        <sc-for list="{{ searchResults }}" as="r" hint-placeholder-count="4">
+          <div role="option" onMouseDown="{{ r.go }}" style="display:flex;gap:12px;align-items:center;padding:8px 10px;border-radius:8px;cursor:pointer" style-hover="background:#e6f7fe">
+            <div style="width:40px;height:40px;flex:none;border-radius:6px;overflow:hidden;background:#f4f5f8;border:1px solid #eceef4"><img src="{{ r.img }}" alt="" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+            <div style="display:flex;flex-direction:column;gap:2px;min-width:0">
+              <span style="font-size:14px;font-weight:600;color:#15182b;line-height:1.3">{{ r.name }}</span>
+              <span style="font-size:12px;color:#8a8fa6">{{ r.kind }}</span>
+            </div>
+          </div>
+        </sc-for>
+        <sc-if value="{{ searchEmpty }}"><div style="padding:12px 10px;font-size:14px;color:#5b6078">No products or categories match “{{ q }}”.</div></sc-if>
+      </div>
+      </sc-if>
+    </label>
+    <nav aria-label="Company" class="header-links" style="display:flex;align-items:center;gap:28px;flex-wrap:wrap">
+      <div onClick="{{ goAbout }}" style="position:relative;padding:8px 0;font-size:15px;font-weight:500;color:#15182b;cursor:pointer;white-space:nowrap" style-hover="color:#03acee">About Us<sc-if value="{{ isAbout }}"><span style="position:absolute;left:0;right:0;bottom:2px;height:2px;background:#03acee;border-radius:2px"></span></sc-if></div>
+      <div onClick="{{ goGallery }}" style="position:relative;padding:8px 0;font-size:15px;font-weight:500;color:#15182b;cursor:pointer;white-space:nowrap" style-hover="color:#03acee">Gallery<sc-if value="{{ isGallery }}"><span style="position:absolute;left:0;right:0;bottom:2px;height:2px;background:#03acee;border-radius:2px"></span></sc-if></div>
+      <div onClick="{{ goContact }}" style="position:relative;padding:8px 0;font-size:15px;font-weight:500;color:#15182b;cursor:pointer;white-space:nowrap" style-hover="color:#03acee">Contact Us<sc-if value="{{ isContact }}"><span style="position:absolute;left:0;right:0;bottom:2px;height:2px;background:#03acee;border-radius:2px"></span></sc-if></div>
+    </nav>
+    <button class="burger" onClick="{{ toggleMob }}" aria-label="Menu" aria-expanded="{{ mobOpen }}" style="display:none;width:42px;height:42px;flex:none;border:1px solid #d3d6e2;border-radius:8px;background:#ffffff;color:#15182b;cursor:pointer;align-items:center;justify-content:center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+  </div>
+  <sc-if value="{{ mobOpen }}">
+  <nav class="mob-menu" aria-label="Mobile menu" style="border-top:1px solid #6ac2e8;background:#ffffff;padding:8px 16px 16px;max-height:calc(100vh - 120px);overflow-y:auto">
+    <div onClick="{{ goProducts }}" style="padding:12px 0;font-size:16px;font-weight:700;color:#15182b;cursor:pointer;border-bottom:1px solid #eceef4">Products</div>
+    <sc-for list="{{ cats }}" as="c" hint-placeholder-count="5">
+      <div onClick="{{ c.go }}" style="padding:11px 0 11px 14px;font-size:14px;color:#3b3f57;cursor:pointer;border-bottom:1px solid #f2f4f7">{{ c.name }}</div>
+    </sc-for>
+    <div onClick="{{ goAbout }}" style="padding:12px 0;font-size:16px;font-weight:600;color:#15182b;cursor:pointer;border-bottom:1px solid #eceef4">About Us</div>
+    <div onClick="{{ goGallery }}" style="padding:12px 0;font-size:16px;font-weight:600;color:#15182b;cursor:pointer;border-bottom:1px solid #eceef4">Gallery</div>
+    <div onClick="{{ goContact }}" style="padding:12px 0;font-size:16px;font-weight:600;color:#15182b;cursor:pointer">Contact Us</div>
+  </nav>
+  </sc-if>
+  <!-- Nav -->
+  <nav class="cat-strip" aria-label="Main" style="position:relative;background:#ffffff;border-top:1px solid #6ac2e8">
+    <sc-if value="{{ pastHero }}"><span aria-hidden="true" style="position:absolute;left:0;right:0;bottom:0;height:1px;background:#6ac2e8;pointer-events:none"></span></sc-if>
+    <div class="main-nav" style="max-width:1280px;margin:0 auto;padding:0 24px;display:flex;flex-wrap:nowrap;align-items:stretch;justify-content:space-between;column-gap:12px;overflow-x:auto">
+      <sc-for list="{{ cats }}" as="c" hint-placeholder-count="5">
+        <div onClick="{{ c.go }}" style="position:relative;padding:15px 0;font-size:clamp(10px,0.95vw,12.5px);font-weight:500;color:#15182b;cursor:pointer;white-space:nowrap;flex:none" style-hover="color:#03acee">{{ c.name }}<sc-if value="{{ c.navActive }}"><span style="position:absolute;left:0;right:0;bottom:8px;height:2px;background:#03acee;border-radius:2px"></span></sc-if></div>
+      </sc-for>
+    </div>
+  </nav>
+</header>
+
+<main style="flex:1">
+
+<!-- HOME -->
+<sc-if value="{{ isHome }}" hint-placeholder-val="{{ true }}">
+<section class="home-hero {{ heroSecCls }}" data-hero aria-label="Building materials supplier in Sharjah, UAE" style="position:relative;min-height:0;display:flex;align-items:center;overflow:hidden;background:#15182b">
+  <div style="position:absolute;inset:0">
+    <image-slot id="home-hero-wide" shape="rect" src="assets/img/hero-products.jpg" placeholder="Wide hero — building materials and products"></image-slot>
+  </div>
+  <div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(21,24,43,0.92) 0%,rgba(21,24,43,0.78) 45%,rgba(21,24,43,0.2) 100%);pointer-events:none"></div>
+  <div class="hero-inner" style="position:relative;width:100%;max-width:1280px;margin:0 auto;padding:56px 24px 48px;pointer-events:none">
+    <div class="hero-copy" style="max-width:680px;display:flex;flex-direction:column;gap:22px;color:#ffffff">
+      <h1 style="margin:0;font-size:52px;line-height:1.05;font-weight:800;text-wrap:pretty">Building Materials Supplier in Sharjah &amp; across the UAE</h1>
+      <p class="hero-p {{ heroCls }}" style="margin:0;font-size:18px;line-height:1.6;color:#e4e6ee;text-wrap:pretty">Al Sughra Building Materials Trading LLC, with 20+ years of excellence in building materials<span class="hero-dots">… </span><a class="read-more" onClick="{{ heroExpand }}" style="pointer-events:auto;color:#6ac2e8;font-weight:600;text-decoration:underline;text-underline-offset:3px;cursor:pointer;white-space:nowrap">Read more</a><span class="hero-more">, supplies tiling and flooring accessories, drywall, plastering and ceiling systems, concrete and masonry accessories, sealing, jointing and protection materials, and scaffolding and architectural products to contractors, fit-out companies and builders across the UAE and the Middle East.</span></p>
+      <p class="hero-pm" style="display:none;margin:0;font-size:14px;line-height:1.55;color:#e4e6ee">
+        <sc-for list="{{ heroLines }}" as="l" hint-placeholder-count="3"><span style="display:block;white-space:nowrap">{{ l.t }}</span></sc-for>
+        <sc-if value="{{ heroShowMore }}"><a onClick="{{ heroExpand }}" style="display:inline-block;margin-top:6px;pointer-events:auto;color:#6ac2e8;font-weight:600;text-decoration:underline;text-underline-offset:3px;cursor:pointer">Read more</a></sc-if>
+      </p>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;pointer-events:auto">
+        <button onClick="{{ goProducts }}" style="border:none;background:#f11a2b;color:#ffffff;padding:16px 30px;border-radius:6px;font-weight:700;font-size:16px;cursor:pointer" style-hover="background:#d10f1f">Shop products</button>
+        <button onClick="{{ openQuote }}" style="border:1.5px solid #ffffff;background:transparent;color:#ffffff;padding:16px 30px;border-radius:6px;font-weight:700;font-size:16px;cursor:pointer" style-hover="background:#ffffff;color:#15182b">Bulk enquiry</button>
+      </div>
+      <ul style="list-style:none;margin:6px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:10px 28px;font-size:14px;color:#e4e6ee">
+        <li style="display:flex;gap:8px;align-items:center"><span style="width:8px;height:8px;background:#03acee;border-radius:50%"></span>3 warehouses &amp; 3 branch offices</li>
+        <li style="display:flex;gap:8px;align-items:center"><span style="width:8px;height:8px;background:#03acee;border-radius:50%"></span>Wholesale &amp; project supply</li>
+        <li style="display:flex;gap:8px;align-items:center"><span style="width:8px;height:8px;background:#03acee;border-radius:50%"></span>Delivery across the UAE</li>
+      </ul>
+    </div>
+  </div>
+</section>
+<div data-screen-label="Home" style="max-width:1280px;margin:0 auto;padding:24px;display:flex;flex-direction:column;gap:40px">
+
+  <section style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:40px;align-items:center;padding:24px 0 8px">
+    <div style="display:flex;flex-direction:column;gap:18px">
+      <h2 style="margin:0;font-size:30px;line-height:1.25;font-weight:800;text-wrap:pretty">Al Sughra Building Materials Trading LLC – Your Trusted Building Materials Supplier in Sharjah, UAE</h2>
+      <p style="margin:0;font-size:16px;line-height:1.75;color:#3b3f57;text-wrap:pretty">Established in 2006, Al Sughra Building Materials Trading LLC is a trusted building materials supplier based in Sharjah, United Arab Emirates (UAE), serving contractors, construction companies, interior designers, traders, and businesses across the UAE and the wider Middle East. With extensive industry experience, we specialize in supplying quality building materials, tile accessories, and construction and interior decoration products to meet the diverse needs of residential, commercial, and industrial projects.</p>
+    </div>
+    <div style="height:380px;position:relative;border-radius:10px;overflow:hidden">
+      <image-slot id="home-intro" shape="rect" src="assets/img/intro-supplies.jpg" placeholder="Building materials stock"></image-slot>
+    </div>
+  </section>
+
+  <!-- Categories -->
+  <section style="display:flex;flex-direction:column;gap:28px">
+    <div style="display:flex;flex-direction:column;gap:10px;max-width:760px">
+        <h2 style="margin:0;font-size:30px;line-height:1.2;font-weight:800;text-wrap:pretty">Building Materials &amp; Construction Accessories in the UAE</h2>
+        <p style="margin:0;font-size:16px;line-height:1.6;color:#3b3f57">Tiling, drywall, concrete, sealing and scaffolding accessories for contractors across the UAE.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:20px">
+      <sc-for list="{{ cats }}" as="c" hint-placeholder-count="5">
+        <article class="home-cat" onClick="{{ c.go }}" style="background:#ffffff;border:1px solid #e4e6ee;border-radius:10px;overflow:hidden;cursor:pointer;display:grid;grid-template-columns:minmax(0,2fr) minmax(0,3fr);min-height:220px" style-hover="border-color:#03acee;box-shadow:0 12px 28px rgba(3,172,238,0.14)">
+          <div style="position:relative;min-height:220px;background:#ffffff"><image-slot id="{{ c.slot }}" shape="rect" src="{{ c.img }}" placeholder="{{ c.name }}"></image-slot><img class="cat-full" src="{{ c.img }}" alt="{{ c.name }}"></div>
+          <div style="padding:22px 24px;display:flex;flex-direction:column;gap:10px">
+            <h3 style="margin:0;font-size:19px;line-height:1.3;font-weight:800;text-wrap:pretty">{{ c.name }}</h3>
+            <p style="margin:0;font-size:14px;line-height:1.6;color:#5b6078;text-wrap:pretty">{{ c.desc }}</p>
+            <p style="margin:0;font-size:13px;line-height:1.6;color:#15182b;flex:1;text-wrap:pretty"><strong style="font-weight:700">Products:</strong> {{ c.products }}</p>
+            <span style="font-size:14px;font-weight:700;color:#03acee">Explore range →</span>
+          </div>
+        </article>
+      </sc-for>
+      <article onClick="{{ openQuote }}" style="background:#15182b;color:#ffffff;border-radius:10px;overflow:hidden;cursor:pointer;display:grid;grid-template-columns:minmax(0,2fr) minmax(0,3fr);min-height:220px" style-hover="box-shadow:0 12px 28px rgba(21,24,43,0.25)">
+        <div style="position:relative;min-height:220px"><image-slot id="cat-bulk" shape="rect" src="assets/img/bulk-supply.jpg" placeholder="Bulk supply"></image-slot></div>
+        <div style="padding:22px 24px;display:flex;flex-direction:column;gap:10px">
+          <span style="font-size:13px;font-weight:700;color:#03acee">BULK &amp; PROJECT SUPPLY</span>
+          <h3 style="margin:0;font-size:19px;line-height:1.3;font-weight:800">Need materials for a full project?</h3>
+          <p style="margin:0;font-size:14px;line-height:1.6;color:#c9cce0;flex:1">Send us your bill of quantities and our sales team will quote across all categories, with stock reserved at our warehouses.</p>
+          <span style="font-size:14px;font-weight:700;color:#ffffff">Request a bulk quote →</span>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Stats band -->
+  <section style="background:#03acee;border-radius:10px;color:#ffffff;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr))">
+    <div style="padding:28px;display:flex;flex-direction:column;gap:4px;border-right:1px solid rgba(255,255,255,0.12)"><span style="font-size:34px;font-weight:800">20+</span><span style="font-size:14px;color:#c9cce0">Years of Excellence in Building Materials</span></div>
+    <div style="padding:28px;display:flex;flex-direction:column;gap:4px;border-right:1px solid rgba(255,255,255,0.12)"><span style="font-size:34px;font-weight:800">3</span><span style="font-size:14px;color:#c9cce0">Warehouses</span></div>
+    <div style="padding:28px;display:flex;flex-direction:column;gap:4px;border-right:1px solid rgba(255,255,255,0.12)"><span style="font-size:34px;font-weight:800">3</span><span style="font-size:14px;color:#c9cce0">Branch offices</span></div>
+    <div style="padding:28px;display:flex;flex-direction:column;gap:4px"><span style="font-size:34px;font-weight:800">Middle East</span><span style="font-size:14px;color:#c9cce0">Regional supply coverage</span></div>
+  </section>
+
+  <!-- Gallery preview -->
+  <section style="display:flex;flex-direction:column;gap:24px">
+    <div style="display:flex;justify-content:space-between;align-items:end;gap:16px;flex-wrap:wrap">
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <h2 style="margin:0;font-size:30px;line-height:1.2;font-weight:800">Our Showroom &amp; Products</h2>
+      </div>
+      <button onClick="{{ goGallery }}" style="border:1px solid #03acee;background:#ffffff;color:#03acee;padding:12px 22px;border-radius:6px;font-weight:600;font-size:14px;cursor:pointer" style-hover="background:#03acee;color:#ffffff">View all →</button>
+    </div>
+    <div class="home-gal" style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));grid-auto-rows:clamp(140px,20vw,260px);gap:14px">
+      <sc-for list="{{ galleryHome }}" as="g" hint-placeholder-count="6">
+        <div class="hov-card" onClick="{{ g.open }}" role="button" aria-label="View larger: {{ g.label }}" style="position:relative;border-radius:8px;overflow:hidden;background:#e9ebf1;cursor:zoom-in"><image-slot id="{{ g.slot }}" shape="rect" src="{{ g.img }}" placeholder="{{ g.label }}"></image-slot></div>
+      </sc-for>
+    </div>
+  </section>
+
+  <!-- Bulk quote + featured products + assistance -->
+  <section style="background:#f4f5f8;border-radius:12px;padding:20px;display:flex;flex-direction:column;gap:20px">
+    <div class="hov-card" style="background:#ffffff;border-radius:10px;padding:28px;display:flex;flex-direction:column;align-items:center;gap:18px;text-align:center;box-shadow:0 2px 12px rgba(21,24,43,0.05)">
+      <div style="width:100%;height:clamp(200px,28vw,350px);position:relative;border-radius:8px;overflow:hidden"><image-slot id="home-bulk-quote" shape="rect" src="assets/img/bulk-quote-warehouse.jpg" placeholder="Bulk supply / project site"></image-slot></div>
+      <h2 style="margin:6px 0 0;font-size:26px;line-height:1.3;font-weight:700;text-wrap:balance">Looking for Bulk Quantities of Building Materials?</h2>
+      <p style="margin:0;font-size:16px;line-height:1.7;color:#3b3f57;text-wrap:pretty">Get high-quality building materials delivered swiftly and affordably at wholesale prices.</p>
+      <button onClick="{{ openQuote }}" style="border:none;background:#f11a2b;color:#ffffff;padding:14px 30px;border-radius:6px;font-weight:700;font-size:15px;cursor:pointer" style-hover="background:#d10f1f">Get Quote</button>
+    </div>
+    <div style="min-width:0;display:flex;flex-direction:column;gap:20px">
+      <div style="background:#ffffff;border-radius:10px;padding:28px;display:flex;flex-direction:column;gap:20px;box-shadow:0 2px 12px rgba(21,24,43,0.05)">
+        <div style="display:flex;justify-content:space-between;align-items:end;gap:12px;flex-wrap:wrap">
+          <div style="display:flex;flex-direction:column;gap:8px">
+            <h2 style="margin:0;font-size:24px;line-height:1.25;font-weight:800">Popular with contractors</h2>
+          </div>
+          <a onClick="{{ goProducts }}" style="font-size:15px;font-weight:700;color:#03acee;cursor:pointer;text-decoration:underline;text-underline-offset:4px" style-hover="color:#f11a2b">View all products →</a>
+        </div>
+        <div class="feat-grid" style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(8px,1.6vw,20px)">
+          <sc-for list="{{ featured }}" as="p" hint-placeholder-count="3">
+            <div class="hov-card" onClick="{{ p.go }}" style="border:1px solid #e4e6ee;border-radius:8px;overflow:hidden;display:flex;flex-direction:column;cursor:pointer;background:#ffffff" style-hover="border-color:#03acee;box-shadow:0 8px 24px rgba(21,24,43,0.08)">
+              <div style="aspect-ratio:3/2;position:relative;background:#f4f5f8"><image-slot id="{{ p.homeSlot }}" shape="rect" src="{{ p.img }}" placeholder="Product shot"></image-slot></div>
+              <div style="padding:clamp(8px,1.4vw,18px);display:flex;flex-direction:column;gap:6px;flex:1;min-width:0">
+                <span style="font-size:clamp(9px,1vw,13px);font-weight:700;letter-spacing:0.08em;color:#8a8fa6">{{ p.catShort }}</span>
+                <span style="font-size:clamp(11px,1.3vw,16px);font-weight:600;line-height:1.35;flex:1">{{ p.name }}</span>
+                <sc-if value="{{ p.hasPrice }}"><span style="font-size:clamp(13px,1.5vw,19px);font-weight:800;color:#03acee">AED {{ p.price }}</span></sc-if>
+              </div>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:20px">
+        <div class="hov-card" style="background:#ffffff;border-radius:10px;overflow:hidden;display:grid;grid-template-columns:minmax(0,3fr) minmax(0,2fr);min-height:240px;box-shadow:0 2px 12px rgba(21,24,43,0.05)">
+          <div style="padding:28px 24px;display:flex;flex-direction:column;justify-content:flex-start;gap:10px;align-items:flex-start">
+            <h3 style="margin:0;font-size:24px;line-height:1.2;font-weight:700">Application Assistance</h3>
+            <p style="margin:0 0 18px;font-size:15px;line-height:1.6;color:#5b6078">We help you find the right applicators if you need.</p>
+            <button onClick="{{ goContact }}" style="margin-top:auto;white-space:nowrap;border:1.5px solid #15182b;background:transparent;color:#15182b;padding:10px 22px;border-radius:6px;font-weight:600;font-size:14px;cursor:pointer" style-hover="background:#15182b;color:#ffffff">Contact Us</button>
+          </div>
+          <div style="position:relative"><image-slot id="home-assist-application" shape="rect" src="assets/img/assist-application.jpg" placeholder="Application assistance"></image-slot></div>
+        </div>
+        <div class="hov-card" style="background:#ffffff;border-radius:10px;overflow:hidden;display:grid;grid-template-columns:minmax(0,3fr) minmax(0,2fr);min-height:240px;box-shadow:0 2px 12px rgba(21,24,43,0.05)">
+          <div style="padding:28px 24px;display:flex;flex-direction:column;justify-content:flex-start;gap:10px;align-items:flex-start">
+            <h3 style="margin:0;font-size:24px;line-height:1.2;font-weight:700">Expert Assistance</h3>
+            <p style="margin:0 0 18px;font-size:15px;line-height:1.6;color:#5b6078">Our experts are ready to help you choose the right products.</p>
+            <a href="https://wa.me/971506372683" target="_blank" rel="noopener" style="margin-top:auto;white-space:nowrap;display:inline-block;border:1.5px solid #15182b;background:transparent;color:#15182b;padding:10px 22px;border-radius:6px;font-weight:600;font-size:14px;cursor:pointer" style-hover="background:#15182b;color:#ffffff">Chat Now</a>
+          </div>
+          <div style="position:relative"><image-slot id="home-assist-expert" shape="rect" src="assets/img/assist-expert.jpg" placeholder="Expert assistance"></image-slot></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQs (schema.org FAQPage microdata) -->
+  <section aria-labelledby="faq-heading" itemscope itemtype="https://schema.org/FAQPage" style="display:flex;flex-direction:column;gap:24px">
+    <div style="display:flex;flex-direction:column;gap:10px;max-width:760px">
+      <h2 id="faq-heading" style="margin:0;font-size:30px;line-height:1.2;font-weight:800;text-wrap:balance">Frequently Asked Questions about Building Materials in Sharjah &amp; the UAE</h2>
+      <p style="margin:0;font-size:16px;line-height:1.7;color:#3b3f57;text-wrap:pretty">Answers to common questions from contractors, fit-out companies and builders about our products, bulk supply and delivery.</p>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <details class="faq" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" open style="background:#ffffff;border:1px solid #e4e6ee;border-radius:10px;padding:0 22px">
+        <summary style="display:flex;justify-content:space-between;align-items:center;gap:16px;padding:20px 0"><h3 itemprop="name" style="margin:0;font-size:17px;line-height:1.4;font-weight:700">What building materials does Al Sughra Building Materials Trading LLC supply in Sharjah?</h3><span class="faq-plus" aria-hidden="true" style="flex:none;font-size:26px;line-height:1;color:#03acee">+</span></summary>
+        <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer" style="padding:0 0 20px"><p itemprop="text" style="margin:0;font-size:15px;line-height:1.75;color:#3b3f57">We supply five main product ranges for construction and interior decoration: tiling and flooring accessories, drywall, plastering and ceiling systems, concrete and masonry accessories, sealing, jointing and protection materials, and scaffolding and architectural products. Our range includes tile trims, stair nosing and tile leveling systems, plastering beads, fiberglass mesh, ceiling tiles and gypsum partition accessories, PVC rebar spacers, chamfers, waterstops and glass blocks, PE backing rod and tapes, PU decorative products, and aluminium scaffolding and ladders.</p></div>
+      </details>
+      <details class="faq" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" style="background:#ffffff;border:1px solid #e4e6ee;border-radius:10px;padding:0 22px">
+        <summary style="display:flex;justify-content:space-between;align-items:center;gap:16px;padding:20px 0"><h3 itemprop="name" style="margin:0;font-size:17px;line-height:1.4;font-weight:700">Do you supply building materials in bulk for contractors and construction projects?</h3><span class="faq-plus" aria-hidden="true" style="flex:none;font-size:26px;line-height:1;color:#03acee">+</span></summary>
+        <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer" style="padding:0 0 20px"><p itemprop="text" style="margin:0;font-size:15px;line-height:1.75;color:#3b3f57">Yes. We are a wholesale building materials supplier serving contractors, construction companies, fit-out firms, interior designers and traders. With 3 warehouses and 3 branch offices, we hold stock for bulk and project orders and offer volume pricing for large quantities.</p></div>
+      </details>
+      <details class="faq" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" style="background:#ffffff;border:1px solid #e4e6ee;border-radius:10px;padding:0 22px">
+        <summary style="display:flex;justify-content:space-between;align-items:center;gap:16px;padding:20px 0"><h3 itemprop="name" style="margin:0;font-size:17px;line-height:1.4;font-weight:700">Do you deliver building materials across the UAE?</h3><span class="faq-plus" aria-hidden="true" style="flex:none;font-size:26px;line-height:1;color:#03acee">+</span></summary>
+        <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer" style="padding:0 0 20px"><p itemprop="text" style="margin:0;font-size:15px;line-height:1.75;color:#3b3f57">Yes. We deliver from our Sharjah warehouses to project sites across the UAE, including Dubai, Abu Dhabi, Ajman and the Northern Emirates, with free delivery on bulk orders. We also supply customers across the wider Middle East.</p></div>
+      </details>
+      <details class="faq" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" style="background:#ffffff;border:1px solid #e4e6ee;border-radius:10px;padding:0 22px">
+        <summary style="display:flex;justify-content:space-between;align-items:center;gap:16px;padding:20px 0"><h3 itemprop="name" style="margin:0;font-size:17px;line-height:1.4;font-weight:700">Which tile accessories and tile trims do you stock?</h3><span class="faq-plus" aria-hidden="true" style="flex:none;font-size:26px;line-height:1;color:#03acee">+</span></summary>
+        <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer" style="padding:0 0 20px"><p itemprop="text" style="margin:0;font-size:15px;line-height:1.75;color:#3b3f57">Our tiling and flooring range includes aluminium expansion cover joints, carpet profiles, stair nosing, tile leveling systems and tile trims for tile installation, floor transitions and finishing in residential, commercial and industrial projects.</p></div>
+      </details>
+      <details class="faq" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" style="background:#ffffff;border:1px solid #e4e6ee;border-radius:10px;padding:0 22px">
+        <summary style="display:flex;justify-content:space-between;align-items:center;gap:16px;padding:20px 0"><h3 itemprop="name" style="margin:0;font-size:17px;line-height:1.4;font-weight:700">Where is your building materials store in Sharjah located?</h3><span class="faq-plus" aria-hidden="true" style="flex:none;font-size:26px;line-height:1;color:#03acee">+</span></summary>
+        <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer" style="padding:0 0 20px"><p itemprop="text" style="margin:0;font-size:15px;line-height:1.75;color:#3b3f57">Our main location is on Maliha Road, opposite Al Ghurair Exchange, Sharjah, UAE. We operate 3 warehouses and 3 branch offices, all with ample parking for customers and trucks.</p></div>
+      </details>
+      <details class="faq" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" style="background:#ffffff;border:1px solid #e4e6ee;border-radius:10px;padding:0 22px">
+        <summary style="display:flex;justify-content:space-between;align-items:center;gap:16px;padding:20px 0"><h3 itemprop="name" style="margin:0;font-size:17px;line-height:1.4;font-weight:700">How do I get a quote or price list for building materials?</h3><span class="faq-plus" aria-hidden="true" style="flex:none;font-size:26px;line-height:1;color:#03acee">+</span></summary>
+        <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer" style="padding:0 0 20px"><p itemprop="text" style="margin:0;font-size:15px;line-height:1.75;color:#3b3f57">Send us your list of materials, quantities and delivery location through our contact form, call +971 6 543 1115, or email sughra88@yahoo.com. Our team will reply with a quotation and can help you choose the right products for your project.</p></div>
+      </details>
+    </div>
+  </section>
+
+  <!-- Service strip -->
+  <section style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px">
+    <div style="background:#ffffff;border:1px solid #e4e6ee;border-radius:10px;padding:20px;display:flex;flex-direction:column;gap:6px"><span style="font-weight:700;font-size:15px">Bulk &amp; project supply</span><span style="font-size:14px;color:#5b6078;line-height:1.5">Volume pricing for contractors and fit-out companies.</span></div>
+    <div style="background:#ffffff;border:1px solid #e4e6ee;border-radius:10px;padding:20px;display:flex;flex-direction:column;gap:6px"><span style="font-weight:700;font-size:15px">Ample parking</span><span style="font-size:14px;color:#5b6078;line-height:1.5">Wide parking at every location, served first come, first served.</span></div>
+    <div style="background:#ffffff;border:1px solid #e4e6ee;border-radius:10px;padding:20px;display:flex;flex-direction:column;gap:6px"><span style="font-weight:700;font-size:15px">Reasonable pricing</span><span style="font-size:14px;color:#5b6078;line-height:1.5">We keep to our agreements and deliver on our obligations.</span></div>
+  </section>
+
+  <!-- Contact us -->
+  <section aria-labelledby="home-contact-heading" style="background:#f4f5f8;border-radius:12px;padding:20px;display:flex;flex-wrap:wrap;gap:20px">
+    <div style="flex:1 1 300px;background:#15182b;color:#ffffff;border-radius:10px;padding:32px 28px;display:flex;flex-direction:column;gap:22px">
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <h2 id="home-contact-heading" style="margin:0;font-size:28px;line-height:1.25;font-weight:800;text-wrap:balance">Get in touch with our team</h2>
+        <p style="margin:0;font-size:15px;line-height:1.7;color:#c9cce0">Call or email us for quotes, stock availability and bulk delivery across the UAE.</p>
+      </div>
+      <a href="tel:+97165431115" style="display:flex;gap:14px;align-items:center;color:#ffffff;text-decoration:none">
+        <span aria-hidden="true" style="flex:none;width:46px;height:46px;border-radius:50%;background:#f11a2b;display:flex;align-items:center;justify-content:center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.18 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.1 9.9a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>
+        <span style="display:flex;flex-direction:column;gap:2px"><span style="font-size:13px;color:#a3a7b8">Telephone</span><span style="font-size:18px;font-weight:700">+971 6 543 1115</span></span>
+      </a>
+      <a href="tel:+971506372683" style="display:flex;gap:14px;align-items:center;color:#ffffff;text-decoration:none">
+        <span aria-hidden="true" style="flex:none;width:46px;height:46px;border-radius:50%;background:#f11a2b;display:flex;align-items:center;justify-content:center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="2"/><path d="M11 18h2"/></svg></span>
+        <span style="display:flex;flex-direction:column;gap:2px"><span style="font-size:13px;color:#a3a7b8">Mobile</span><span style="font-size:18px;font-weight:700">+971 50 637 2683</span></span>
+      </a>
+      <a href="https://wa.me/971506372683" target="_blank" rel="noopener" style="display:flex;gap:14px;align-items:center;color:#ffffff;text-decoration:none">
+        <span aria-hidden="true" style="flex:none;width:46px;height:46px;border-radius:50%;background:#25d366;display:flex;align-items:center;justify-content:center"><svg width="22" height="22" viewBox="0 0 24 24" fill="#ffffff"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.08 1.76-.72 2.01-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35zM12.04 21.8h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.9-9.88 2.64 0 5.12 1.03 6.99 2.9a9.82 9.82 0 0 1 2.89 6.99c0 5.45-4.44 9.88-9.89 9.88zm8.41-18.3A11.82 11.82 0 0 0 12.04 0C5.5 0 .17 5.33.16 11.88c0 2.1.55 4.14 1.59 5.94L.06 24l6.3-1.65a11.86 11.86 0 0 0 5.68 1.45h.01c6.55 0 11.88-5.33 11.88-11.88 0-3.17-1.24-6.16-3.48-8.4z"/></svg></span>
+        <span style="display:flex;flex-direction:column;gap:2px"><span style="font-size:13px;color:#a3a7b8">WhatsApp</span><span style="font-size:18px;font-weight:700">+971 50 637 2683</span></span>
+      </a>
+      <a href="mailto:sughra88@yahoo.com" style="display:flex;gap:14px;align-items:center;color:#ffffff;text-decoration:none">
+        <span aria-hidden="true" style="flex:none;width:46px;height:46px;border-radius:50%;background:#03acee;display:flex;align-items:center;justify-content:center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></span>
+        <span style="display:flex;flex-direction:column;gap:2px;min-width:0"><span style="font-size:13px;color:#a3a7b8">Email</span><span style="font-size:18px;font-weight:700;overflow-wrap:anywhere">sughra88@yahoo.com</span></span>
+      </a>
+      <a href="https://goo.gl/maps/TTTuSeyrygEDe4yHA" target="_blank" rel="noopener" style="display:flex;gap:14px;align-items:center;color:#ffffff;text-decoration:none">
+        <span aria-hidden="true" style="flex:none;width:46px;height:46px;border-radius:50%;background:#2a2e4a;display:flex;align-items:center;justify-content:center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
+        <span style="display:flex;flex-direction:column;gap:2px"><span style="font-size:13px;color:#a3a7b8">Address</span><span style="font-size:15px;font-weight:600;line-height:1.5">Maliha Road, Opposite Al Ghurair Exchange, Sharjah, UAE</span></span>
+      </a>
+    </div>
+    <div style="flex:2 1 520px;min-width:0;border-radius:10px;overflow:hidden;background:#e4e6ee;min-height:380px">
+      <iframe title="Al Sughra Building Material Trading LLC on Google Maps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3606.58578190111!2d55.408714499999995!3d25.318117299999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f599d3ad4a601%3A0x964e15d1a0bcc34c!2sAl%20Sughra%20Building%20Material%20Trading%20LLC!5e0!3m2!1sen!2sae!4v1793340072003!5m2!1sen!2sae" width="600" height="450" style="border:0;display:block;width:100%;height:100%;min-height:380px" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+    </div>
+  </section>
+</div>
+</sc-if>
+
+<!-- ABOUT -->
+<sc-if value="{{ isAbout }}">
+<div data-screen-label="About Us">
+  <section data-hero aria-label="About Al Sughra Building Materials Trading LLC" style="position:relative;min-height:clamp(340px,38vw,520px);display:flex;align-items:center;overflow:hidden;background:#15182b">
+    <div style="position:absolute;inset:0">
+      <image-slot id="about-hero-wide" shape="rect" src="assets/img/about-hero-showroom.jpg" placeholder="About hero — product showroom"></image-slot>
+    </div>
+    <div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(21,24,43,0.92) 0%,rgba(21,24,43,0.75) 40%,rgba(21,24,43,0.15) 100%);pointer-events:none"></div>
+    <div style="position:relative;width:100%;max-width:1280px;margin:0 auto;padding:56px 24px;pointer-events:none">
+      <div style="max-width:620px;display:flex;flex-direction:column;gap:18px;color:#ffffff">
+        <span style="font-size:13px;color:#c9cce0">Home / About Us</span>
+        <h1 style="margin:0;font-size:clamp(34px,4.4vw,52px);line-height:1.08;font-weight:800;text-wrap:balance">About Al Sughra Building Materials</h1>
+        <p style="margin:0;font-size:18px;line-height:1.6;color:#e4e6ee;text-wrap:pretty">A trusted supplier of building materials, tile accessories, drywall systems and waterproofing solutions to contractors and builders across the UAE and the Middle East.</p>
+      </div>
+    </div>
+  </section>
+  <div style="max-width:1280px;margin:0 auto;padding:48px 24px 28px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:48px;align-items:start">
+    <div style="display:flex;flex-direction:column;gap:20px">
+      <span style="font-family:'Inter',sans-serif;font-size:13px;font-weight:700;letter-spacing:0.18em;color:#f11a2b">AL SUGHRA BUILDING MATERIALS</span>
+      <h2 style="margin:0;font-size:30px;line-height:1.2;font-weight:800;text-wrap:pretty">One of the largest building material companies based in Sharjah, UAE.</h2>
+      <p style="margin:0;font-size:16px;line-height:1.7;color:#3b3f57">AL SUGHRA BLDG MAT TR LLC is one of the largest building material company based in UAE — SHARJAH. With over 20 years of excellence in the building materials industry, we have established a strong reputation built on trust, quality, and reliability. Guided by our philosophy of “Quality First, Clients Foremost,” we are committed to delivering superior products and exceptional customer service. Our experienced and dedicated sales team works tirelessly to understand our customers' needs, build lasting relationships, and earn their continued trust. Currently, our company incorporates the entire Middle East with several brands of building material products specialized in construction and interior decorations.</p>
+    </div>
+    <div style="height:440px;position:relative;border-radius:10px;overflow:hidden">
+      <image-slot id="about-banner" shape="rect" src="assets/img/about-warehouse.jpg" placeholder="Company / warehouse photo"></image-slot>
+    </div>
+  </div>
+  <div style="max-width:1280px;margin:0 auto;padding:0 24px 40px;display:flex;flex-direction:column;gap:20px">
+    <p style="margin:0;font-size:16px;line-height:1.7;color:#3b3f57">We have 3 warehouses and 3 branch offices at various locations with a wide range of parking facilities to assist as first come first serve basis. We constantly endure by agreements and deliver obligations in our business to genuinely serve our clients at reasonable pricing.</p>
+  </div>
+  <div style="max-width:1280px;margin:0 auto;padding:0 24px 56px;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px">
+    <div style="background:#ffffff;border-top:3px solid #f11a2b;border-radius:8px;padding:24px;display:flex;flex-direction:column;gap:6px"><span style="font-size:32px;font-weight:800;color:#03acee">20+</span><span style="font-size:14px;color:#5b6078">Years of Excellence in Building Materials</span></div>
+    <div style="background:#ffffff;border-top:3px solid #03acee;border-radius:8px;padding:24px;display:flex;flex-direction:column;gap:6px"><span style="font-size:32px;font-weight:800;color:#03acee">3 + 3</span><span style="font-size:14px;color:#5b6078">Warehouses and branch offices</span></div>
+    <div style="background:#ffffff;border-top:3px solid #03acee;border-radius:8px;padding:24px;display:flex;flex-direction:column;gap:6px"><span style="font-size:20px;font-weight:800;color:#03acee;line-height:1.3">“Quality first, Clients foremost”</span><span style="font-size:14px;color:#5b6078">Our business tenet</span></div>
+  </div>
+  <!-- Mission & Vision -->
+  <section aria-label="Our mission and vision" style="max-width:1280px;margin:0 auto;padding:0 24px 64px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:24px">
+    <article style="background:#ffffff;border:1px solid #e4e6ee;border-top:4px solid #f11a2b;border-radius:10px;padding:32px 28px;display:flex;flex-direction:column;gap:16px;box-shadow:0 2px 12px rgba(21,24,43,0.05)">
+      <div style="display:flex;align-items:center;gap:14px">
+        <span aria-hidden="true" style="flex:none;width:52px;height:52px;border-radius:50%;background:#f11a2b;display:flex;align-items:center;justify-content:center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></span>
+        <h2 style="margin:0;font-size:26px;line-height:1.2;font-weight:800">Our Mission</h2>
+      </div>
+      <p style="margin:0;font-size:16px;line-height:1.75;color:#3b3f57;text-wrap:pretty">To provide high-quality building materials, construction supplies, and interior decoration products across the UAE and Middle East at competitive prices. We are committed to delivering reliable products, maintaining strong supplier partnerships, and providing exceptional customer service through our experienced team. Guided by our philosophy of “Quality First, Clients Foremost,” we strive to build lasting relationships and support the success of every construction and development project we serve.</p>
+    </article>
+    <article style="background:#ffffff;border:1px solid #e4e6ee;border-top:4px solid #03acee;border-radius:10px;padding:32px 28px;display:flex;flex-direction:column;gap:16px;box-shadow:0 2px 12px rgba(21,24,43,0.05)">
+      <div style="display:flex;align-items:center;gap:14px">
+        <span aria-hidden="true" style="flex:none;width:52px;height:52px;border-radius:50%;background:#03acee;display:flex;align-items:center;justify-content:center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg></span>
+        <h2 style="margin:0;font-size:26px;line-height:1.2;font-weight:800">Our Vision</h2>
+      </div>
+      <p style="margin:0;font-size:16px;line-height:1.75;color:#3b3f57;text-wrap:pretty">To become one of the UAE's most trusted and preferred building materials suppliers, recognized for product quality, competitive pricing, reliability, and customer satisfaction. We aspire to expand our presence across the Middle East, continuously diversify our range of construction and interior decoration materials, and set higher standards in the building materials trading industry through innovation, operational excellence, and long-term partnerships.</p>
+    </article>
+  </section>
+  <!-- About: FAQs + contact form -->
+  <div style="max-width:1280px;margin:0 auto;padding:0 24px 64px;display:flex;flex-direction:column;gap:56px">
+  <section aria-labelledby="about-faq-heading" style="display:flex;flex-direction:column;gap:24px">
+    <div style="display:flex;flex-direction:column;gap:10px;max-width:760px">
+      <h2 id="about-faq-heading" style="margin:0;font-size:30px;line-height:1.2;font-weight:800;text-wrap:balance">Frequently Asked Questions about Building Materials in Sharjah &amp; the UAE</h2>
+      <p style="margin:0;font-size:16px;line-height:1.7;color:#3b3f57;text-wrap:pretty">Answers to common questions from contractors, fit-out companies and builders about our products, bulk supply and delivery.</p>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <details class="faq" open style="background:#ffffff;border:1px solid #e4e6ee;border-radius:10px;padding:0 22px">
+        <summary style="display:flex;justify-content:space-between;align-items:center;gap:16px;padding:20px 0"><h3 style="margin:0;font-size:17px;line-height:1.4;font-weight:700">What building materials does Al Sughra Building Materials Trading LLC supply in Sharjah?</h3><span class="faq-plus" aria-hidden="true" style="flex:none;font-size:26px;line-height:1;color:#03acee">+</span></summary>
+        <div style="padding:0 0 20px"><p style="margin:0;font-size:15px;line-height:1.75;color:#3b3f57">We supply five main product ranges for construction and interior decoration: tiling and flooring accessories, drywall, plastering and ceiling systems, concrete and masonry accessories, sealing, jointing and protection materials, and scaffolding and architectural products. Our range includes tile trims, stair nosing and tile leveling systems, plastering beads, fiberglass mesh, ceiling tiles and gypsum partition accessories, PVC rebar spacers, chamfers, waterstops and glass blocks, PE backing rod and tapes, PU decorative products, and aluminium scaffolding and ladders.</p></div>
+      </details>
+      <details class="faq" style="background:#ffffff;border:1px solid #e4e6ee;border-radius:10px;padding:0 22px">
+        <summary style="display:flex;justify-content:space-between;align-items:center;gap:16px;padding:20px 0"><h3 style="margin:0;font-size:17px;line-height:1.4;font-weight:700">Do you supply building materials in bulk for contractors and construction projects?</h3><span class="faq-plus" aria-hidden="true" style="flex:none;font-size:26px;line-height:1;color:#03acee">+</span></summary>
+        <div style="padding:0 0 20px"><p style="margin:0;font-size:15px;line-height:1.75;color:#3b3f57">Yes. We are a wholesale building materials supplier serving contractors, construction companies, fit-out firms, interior designers and traders. With 3 warehouses and 3 branch offices, we hold stock for bulk and project orders and offer volume pricing for large quantities.</p></div>
+      </details>
+      <details class="faq" style="background:#ffffff;border:1px solid #e4e6ee;border-radius:10px;padding:0 22px">
+        <summary style="display:flex;justify-content:space-between;align-items:center;gap:16px;padding:20px 0"><h3 style="margin:0;font-size:17px;line-height:1.4;font-weight:700">Do you deliver building materials across the UAE?</h3><span class="faq-plus" aria-hidden="true" style="flex:none;font-size:26px;line-height:1;color:#03acee">+</span></summary>
+        <div style="padding:0 0 20px"><p style="margin:0;font-size:15px;line-height:1.75;color:#3b3f57">Yes. We deliver from our Sharjah warehouses to project sites across the UAE, including Dubai, Abu Dhabi, Ajman and the Northern Emirates, with free delivery on bulk orders. We also supply customers across the wider Middle East.</p></div>
+      </details>
+      <details class="faq" style="background:#ffffff;border:1px solid #e4e6ee;border-radius:10px;padding:0 22px">
+        <summary style="display:flex;justify-content:space-between;align-items:center;gap:16px;padding:20px 0"><h3 style="margin:0;font-size:17px;line-height:1.4;font-weight:700">Which tile accessories and tile trims do you stock?</h3><span class="faq-plus" aria-hidden="true" style="flex:none;font-size:26px;line-height:1;color:#03acee">+</span></summary>
+        <div style="padding:0 0 20px"><p style="margin:0;font-size:15px;line-height:1.75;color:#3b3f57">Our tiling and flooring range includes aluminium expansion cover joints, carpet profiles, stair nosing, tile leveling systems and tile trims for tile installation, floor transitions and finishing in residential, commercial and industrial projects.</p></div>
+      </details>
+      <details class="faq" style="background:#ffffff;border:1px solid #e4e6ee;border-radius:10px;padding:0 22px">
+        <summary style="display:flex;justify-content:space-between;align-items:center;gap:16px;padding:20px 0"><h3 style="margin:0;font-size:17px;line-height:1.4;font-weight:700">Where is your building materials store in Sharjah located?</h3><span class="faq-plus" aria-hidden="true" style="flex:none;font-size:26px;line-height:1;color:#03acee">+</span></summary>
+        <div style="padding:0 0 20px"><p style="margin:0;font-size:15px;line-height:1.75;color:#3b3f57">Our main location is on Maliha Road, opposite Al Ghurair Exchange, Sharjah, UAE. We operate 3 warehouses and 3 branch offices, all with ample parking for customers and trucks.</p></div>
+      </details>
+      <details class="faq" style="background:#ffffff;border:1px solid #e4e6ee;border-radius:10px;padding:0 22px">
+        <summary style="display:flex;justify-content:space-between;align-items:center;gap:16px;padding:20px 0"><h3 style="margin:0;font-size:17px;line-height:1.4;font-weight:700">How do I get a quote or price list for building materials?</h3><span class="faq-plus" aria-hidden="true" style="flex:none;font-size:26px;line-height:1;color:#03acee">+</span></summary>
+        <div style="padding:0 0 20px"><p style="margin:0;font-size:15px;line-height:1.75;color:#3b3f57">Send us your list of materials, quantities and delivery location through our contact form, call +971 6 543 1115, or email sughra88@yahoo.com. Our team will reply with a quotation and can help you choose the right products for your project.</p></div>
+      </details>
+    </div>
+  </section>
+
+  <section aria-labelledby="about-contact-heading" style="background:#f4f5f8;border-radius:12px;padding:20px;display:flex;flex-wrap:wrap;gap:20px">
+    <div style="flex:1 1 300px;background:#15182b;color:#ffffff;border-radius:10px;padding:32px 28px;display:flex;flex-direction:column;gap:22px">
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <h2 id="about-contact-heading" style="margin:0;font-size:28px;line-height:1.25;font-weight:800;text-wrap:balance">Get in touch with our team</h2>
+        <p style="margin:0;font-size:15px;line-height:1.7;color:#c9cce0">Call or email us for quotes, stock availability and bulk delivery across the UAE.</p>
+      </div>
+      <a href="tel:+97165431115" style="display:flex;gap:14px;align-items:center;color:#ffffff;text-decoration:none">
+        <span aria-hidden="true" style="flex:none;width:46px;height:46px;border-radius:50%;background:#f11a2b;display:flex;align-items:center;justify-content:center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.18 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.1 9.9a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>
+        <span style="display:flex;flex-direction:column;gap:2px"><span style="font-size:13px;color:#a3a7b8">Telephone</span><span style="font-size:18px;font-weight:700">+971 6 543 1115</span></span>
+      </a>
+      <a href="tel:+971506372683" style="display:flex;gap:14px;align-items:center;color:#ffffff;text-decoration:none">
+        <span aria-hidden="true" style="flex:none;width:46px;height:46px;border-radius:50%;background:#f11a2b;display:flex;align-items:center;justify-content:center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="2"/><path d="M11 18h2"/></svg></span>
+        <span style="display:flex;flex-direction:column;gap:2px"><span style="font-size:13px;color:#a3a7b8">Mobile</span><span style="font-size:18px;font-weight:700">+971 50 637 2683</span></span>
+      </a>
+      <a href="https://wa.me/971506372683" target="_blank" rel="noopener" style="display:flex;gap:14px;align-items:center;color:#ffffff;text-decoration:none">
+        <span aria-hidden="true" style="flex:none;width:46px;height:46px;border-radius:50%;background:#25d366;display:flex;align-items:center;justify-content:center"><svg width="22" height="22" viewBox="0 0 24 24" fill="#ffffff"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.08 1.76-.72 2.01-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35zM12.04 21.8h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.9-9.88 2.64 0 5.12 1.03 6.99 2.9a9.82 9.82 0 0 1 2.89 6.99c0 5.45-4.44 9.88-9.89 9.88zm8.41-18.3A11.82 11.82 0 0 0 12.04 0C5.5 0 .17 5.33.16 11.88c0 2.1.55 4.14 1.59 5.94L.06 24l6.3-1.65a11.86 11.86 0 0 0 5.68 1.45h.01c6.55 0 11.88-5.33 11.88-11.88 0-3.17-1.24-6.16-3.48-8.4z"/></svg></span>
+        <span style="display:flex;flex-direction:column;gap:2px"><span style="font-size:13px;color:#a3a7b8">WhatsApp</span><span style="font-size:18px;font-weight:700">+971 50 637 2683</span></span>
+      </a>
+      <a href="mailto:sughra88@yahoo.com" style="display:flex;gap:14px;align-items:center;color:#ffffff;text-decoration:none">
+        <span aria-hidden="true" style="flex:none;width:46px;height:46px;border-radius:50%;background:#03acee;display:flex;align-items:center;justify-content:center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></span>
+        <span style="display:flex;flex-direction:column;gap:2px;min-width:0"><span style="font-size:13px;color:#a3a7b8">Email</span><span style="font-size:18px;font-weight:700;overflow-wrap:anywhere">sughra88@yahoo.com</span></span>
+      </a>
+      <a href="https://goo.gl/maps/TTTuSeyrygEDe4yHA" target="_blank" rel="noopener" style="display:flex;gap:14px;align-items:center;color:#ffffff;text-decoration:none">
+        <span aria-hidden="true" style="flex:none;width:46px;height:46px;border-radius:50%;background:#2a2e4a;display:flex;align-items:center;justify-content:center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
+        <span style="display:flex;flex-direction:column;gap:2px"><span style="font-size:13px;color:#a3a7b8">Address</span><span style="font-size:15px;font-weight:600;line-height:1.5">Maliha Road, Opposite Al Ghurair Exchange, Sharjah, UAE</span></span>
+      </a>
+    </div>
+    <div style="flex:2 1 520px;min-width:0;background:#ffffff;border:1px solid #e4e6ee;border-radius:10px;padding:28px;display:flex;flex-direction:column;gap:18px">
+      <h2 style="margin:0;font-size:22px;font-weight:800;letter-spacing:0.02em">SEND US A MESSAGE</h2>
+      <sc-if value="{{ sent }}">
+        <div style="background:#e6f7fe;border:1px solid #9ed2f5;color:#15182b;padding:14px 16px;border-radius:6px;font-size:14px">Thank you. Your message has been sent — our team will get back to you shortly.</div>
+      </sc-if>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px">
+        <label style="display:flex;flex-direction:column;gap:6px;font-size:13px;font-weight:600">Name<input style="border:1px solid #d3d6e2;border-radius:6px;padding:11px 12px;font-size:14px"></label>
+        <label style="display:flex;flex-direction:column;gap:6px;font-size:13px;font-weight:600">E-mail<input type="email" style="border:1px solid #d3d6e2;border-radius:6px;padding:11px 12px;font-size:14px"></label>
+        <label style="display:flex;flex-direction:column;gap:6px;font-size:13px;font-weight:600">Contact Number<input type="tel" style="border:1px solid #d3d6e2;border-radius:6px;padding:11px 12px;font-size:14px"></label>
+        <label style="display:flex;flex-direction:column;gap:6px;font-size:13px;font-weight:600">Company Name<input type="text" autocomplete="organization" style="border:1px solid #d3d6e2;border-radius:6px;padding:11px 12px;font-size:14px"></label>
+      </div>
+      <label style="display:flex;flex-direction:column;gap:6px;font-size:13px;font-weight:600">Message<textarea rows="5" style="border:1px solid #d3d6e2;border-radius:6px;padding:11px 12px;font-size:14px;resize:vertical"></textarea></label>
+      <button onClick="{{ send }}" style="align-self:start;border:none;background:#f11a2b;color:#ffffff;padding:14px 30px;border-radius:6px;font-weight:700;font-size:15px;cursor:pointer" style-hover="background:#d10f1f">Send message</button>
+    </div>
+  </section>
+  </div>
+</div>
+</sc-if>
+
+<!-- PRODUCTS (all categories) -->
+<sc-if value="{{ isProducts }}">
+<div data-screen-label="Products">
+  <div style="color:#15182b">
+    <div style="max-width:1280px;margin:0 auto;padding:28px 24px 0;display:flex;flex-direction:column;gap:6px">
+      <span style="font-size:13px;color:#8a8fa6"><span onClick="{{ goHome }}" style="cursor:pointer" style-hover="color:#03acee">Home</span> / Products</span>
+      <h1 style="margin:0;font-size:30px;line-height:1.2;font-weight:800;text-wrap:pretty">Our Products</h1>
+      <p style="margin:0;font-size:15px;line-height:1.6;color:#5b6078;max-width:720px;text-wrap:pretty">Browse our building materials by category. Select a category to see its products.</p>
+    </div>
+  </div>
+  <div style="max-width:1280px;margin:0 auto;padding:24px 24px 56px;display:flex;flex-direction:column;gap:48px">
+    <div class="cat-grid">
+      <sc-for list="{{ cats }}" as="c" hint-placeholder-count="5">
+        <article class="hov-card" onClick="{{ c.go }}" style="background:#ffffff;border:1px solid #e4e6ee;border-radius:12px;overflow:hidden;display:flex;flex-direction:column;cursor:pointer" style-hover="border-color:#03acee;box-shadow:0 12px 32px rgba(21,24,43,0.10)">
+          <div style="aspect-ratio:16/9;position:relative;background:#f4f5f8"><image-slot id="{{ c.cardSlot }}" shape="rect" src="{{ c.img }}" placeholder="{{ c.name }}"></image-slot></div>
+          <div style="padding:24px;display:flex;flex-direction:column;gap:10px;flex:1">
+            <h2 style="margin:0;font-size:22px;line-height:1.3;font-weight:800;text-wrap:balance">{{ c.name }}</h2>
+            <p style="margin:0;font-size:15px;line-height:1.65;color:#5b6078">{{ c.card }}</p>
+            <p style="margin:0;font-size:14px;line-height:1.65;color:#15182b;flex:1;text-wrap:pretty"><strong style="font-weight:700">Products:</strong> {{ c.products }}</p>
+            <span style="margin-top:6px;font-size:15px;font-weight:700;color:#03acee">View products →</span>
+          </div>
+        </article>
+      </sc-for>
+    </div>
+    <section aria-labelledby="bulk-cta-heading" style="background:#15182b;color:#ffffff;border-radius:12px;padding:clamp(28px,4vw,48px);display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:24px">
+      <div style="display:flex;flex-direction:column;gap:10px;max-width:680px">
+        <span style="font-size:13px;font-weight:700;letter-spacing:0.16em;color:#03acee">BULK &amp; PROJECT SUPPLY</span>
+        <h2 id="bulk-cta-heading" style="margin:0;font-size:clamp(24px,3vw,34px);line-height:1.2;font-weight:800;text-wrap:balance">Need materials for a full project? Request a bulk quote.</h2>
+        <p style="margin:0;font-size:16px;line-height:1.65;color:#c9cce0;text-wrap:pretty">Send us your material list, quantities and site location, and our team will prepare a quotation with volume pricing and delivery across the UAE.</p>
+      </div>
+      <div style="display:flex;gap:12px;flex-wrap:wrap">
+        <button onClick="{{ openQuote }}" style="border:none;background:#f11a2b;color:#ffffff;padding:16px 28px;border-radius:6px;font-weight:700;font-size:16px;cursor:pointer;white-space:nowrap" style-hover="background:#d10f1f">Request a bulk quote</button>
+        <a href="https://wa.me/971506372683" target="_blank" rel="noopener" style="border:1.5px solid #ffffff;color:#ffffff;padding:15px 24px;border-radius:6px;font-weight:700;font-size:16px;white-space:nowrap" style-hover="background:#ffffff;color:#15182b">WhatsApp us</a>
+      </div>
+    </section>
+  </div>
+</div>
+</sc-if>
+
+<!-- CATEGORY (products in one category) -->
+<sc-if value="{{ isCategory }}">
+<div data-screen-label="Category">
+  <div style="color:#15182b">
+    <div style="max-width:1280px;margin:0 auto;padding:28px 24px 0;display:flex;flex-direction:column;gap:8px">
+      <span style="font-size:13px;color:#8a8fa6"><span onClick="{{ goHome }}" style="cursor:pointer" style-hover="color:#03acee">Home</span> / <span onClick="{{ goProducts }}" style="cursor:pointer" style-hover="color:#03acee">Products</span> / {{ curCat.name }}</span>
+      <h1 style="margin:0;font-size:30px;line-height:1.2;font-weight:800;text-wrap:pretty">{{ curCat.name }}</h1>
+      <p style="margin:4px 0 0;font-size:16px;line-height:1.7;color:#3b3f57;max-width:900px;text-wrap:pretty">{{ curCat.seo }}</p>
+    </div>
+  </div>
+  <div style="max-width:1280px;margin:0 auto;padding:28px 24px 56px;display:flex;flex-direction:column;gap:48px">
+    <div class="prod-grid" style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(8px,2vw,24px)">
+      <sc-for list="{{ catItems }}" as="p" hint-placeholder-count="3">
+        <article class="hov-card" onClick="{{ p.go }}" style="background:#ffffff;border:1px solid #e4e6ee;border-radius:10px;overflow:hidden;display:flex;flex-direction:column;min-width:0;cursor:pointer" style-hover="border-color:#03acee;box-shadow:0 10px 26px rgba(21,24,43,0.10)">
+          <div style="aspect-ratio:4/3;position:relative;background:#f4f5f8"><image-slot id="{{ p.slot }}" shape="rect" fit="contain" src="{{ p.mainImg }}" placeholder="Product shot"></image-slot></div>
+          <div style="padding:clamp(8px,1.8vw,20px);display:flex;flex-direction:column;gap:clamp(6px,1vw,12px);flex:1;min-width:0">
+            <h2 style="margin:0;font-size:clamp(12px,1.5vw,18px);font-weight:700;line-height:1.35;flex:1;overflow-wrap:anywhere">{{ p.name }}</h2>
+            <sc-if value="{{ p.hasPrice }}"><span style="font-size:clamp(13px,1.6vw,19px);font-weight:800;color:#03acee">AED {{ p.price }}</span></sc-if>
+            <span style="font-size:clamp(11px,1.2vw,15px);font-weight:700;color:#03acee">View product details →</span>
+          </div>
+        </article>
+      </sc-for>
+    </div>
+    <section aria-labelledby="other-cats-heading" style="display:flex;flex-direction:column;gap:20px">
+      <div style="display:flex;justify-content:space-between;align-items:end;gap:12px;flex-wrap:wrap">
+        <h2 id="other-cats-heading" style="margin:0;font-size:24px;line-height:1.25;font-weight:800">Browse other categories</h2>
+        <a onClick="{{ goProducts }}" style="font-size:15px;font-weight:700;color:#03acee;cursor:pointer" style-hover="color:#f11a2b">All products →</a>
+      </div>
+      <div class="cat-marquee">
+        <div class="cat-track">
+          <sc-for list="{{ otherCats }}" as="c" hint-placeholder-count="8">
+            <article class="hov-card" onClick="{{ c.go }}" style="flex:none;width:280px;background:#ffffff;border:1px solid #e4e6ee;border-radius:10px;overflow:hidden;display:flex;flex-direction:column;cursor:pointer" style-hover="border-color:#03acee;box-shadow:0 10px 26px rgba(21,24,43,0.10)">
+              <div style="aspect-ratio:16/10;position:relative;background:#f4f5f8"><image-slot id="{{ c.slot }}" shape="rect" src="{{ c.img }}" placeholder="{{ c.name }}"></image-slot></div>
+              <div style="padding:16px;display:flex;flex-direction:column;gap:6px">
+                <span style="font-size:16px;font-weight:700;line-height:1.35">{{ c.name }}</span>
+                <span style="font-size:14px;font-weight:700;color:#03acee">View products →</span>
+              </div>
+            </article>
+          </sc-for>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+</sc-if>
+
+<!-- PRODUCT DETAILS -->
+<sc-if value="{{ isProduct }}">
+<div data-screen-label="Product" itemscope itemtype="https://schema.org/Product" style="max-width:1280px;margin:0 auto;padding:28px 24px 64px;display:flex;flex-direction:column;gap:40px">
+  <nav aria-label="Breadcrumb" style="font-size:13px;color:#8a8fa6;display:flex;flex-wrap:wrap;gap:6px">
+    <span onClick="{{ goHome }}" style="cursor:pointer" style-hover="color:#03acee">Home</span><span>/</span>
+    <span onClick="{{ goProducts }}" style="cursor:pointer" style-hover="color:#03acee">Products</span><span>/</span>
+    <span onClick="{{ curProd.catGo }}" style="cursor:pointer" style-hover="color:#03acee">{{ curProd.catName }}</span><span>/</span>
+    <span style="color:#15182b">{{ curProd.name }}</span>
+  </nav>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:clamp(24px,4vw,48px);align-items:start">
+    <div style="display:flex;flex-direction:column;gap:12px;min-width:0">
+      <div style="aspect-ratio:1/1;position:relative;background:#ffffff;border:1px solid #e4e6ee;border-radius:12px;overflow:hidden">
+        <sc-if value="{{ curProd.hasImg }}"><img itemprop="image" src="{{ curProd.curImg }}" alt="{{ curProd.name }}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;padding:12px;box-sizing:border-box"></sc-if>
+        <sc-if value="{{ curProd.noImg }}"><image-slot id="{{ curProd.slot }}" shape="rect" fit="contain" placeholder="Product image"></image-slot></sc-if>
+      </div>
+      <sc-if value="{{ curProd.multi }}">
+        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(72px,1fr));gap:10px">
+          <sc-for list="{{ prodThumbs }}" as="t" hint-placeholder-count="4">
+            <button onClick="{{ t.pick }}" aria-label="Show image {{ t.n }} of {{ curProd.name }}" style="aspect-ratio:1/1;padding:4px;background:#ffffff;border:{{ t.border }};border-radius:8px;cursor:pointer;overflow:hidden" style-hover="border-color:#03acee"><img src="{{ t.src }}" alt="" style="width:100%;height:100%;object-fit:contain;display:block"></button>
+          </sc-for>
+        </div>
+      </sc-if>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:20px">
+      <div style="display:flex;flex-direction:column;gap:8px">
+        <span itemprop="category" style="font-size:13px;font-weight:700;letter-spacing:0.12em;color:#f11a2b">{{ curProd.catShort }}</span>
+        <h1 itemprop="name" style="margin:0;font-size:clamp(26px,3vw,36px);line-height:1.2;font-weight:800;text-wrap:balance">{{ curProd.name }}</h1>
+        <sc-if value="{{ curProd.hasPrice }}"><span style="font-size:22px;font-weight:800;color:#03acee">AED {{ curProd.price }}</span></sc-if>
+      </div>
+      <div style="border:1px solid #e4e6ee;border-radius:10px;overflow:hidden">
+        <div style="padding:14px 18px;background:#15182b;color:#ffffff;font-weight:700;font-size:14px;letter-spacing:0.06em">PRODUCT SPECIFICATIONS</div>
+        <sc-for list="{{ prodSpecs }}" as="r" hint-placeholder-count="6">
+          <div style="display:grid;grid-template-columns:minmax(110px,1fr) 2fr;gap:12px;padding:12px 18px;border-top:1px solid #eceef4;font-size:15px;line-height:1.5">
+            <span style="color:#5b6078;font-weight:600">{{ r.label }}</span><span style="color:#15182b">{{ r.value }}</span>
+          </div>
+        </sc-for>
+      </div>
+      <div class="prod-cta" style="display:flex;gap:12px;flex-wrap:wrap">
+        <button onClick="{{ openQuote }}" style="border:none;background:#03acee;color:#ffffff;padding:15px 30px;border-radius:6px;font-weight:700;font-size:16px;cursor:pointer" style-hover="background:#0293cc">Send enquiry</button>
+        <a href="{{ curProd.waLink }}" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:10px;border:none;background:#4cc247;color:#ffffff;padding:14px 26px;border-radius:6px;font-weight:500;font-size:17px;box-shadow:0 4px 12px rgba(0,0,0,0.12)" style-hover="background:#3fb03a;color:#ffffff"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.870.12.57-.08 1.76-.72 2.01-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35zM12.04 21.8h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.9-9.88 2.64 0 5.12 1.03 6.99 2.9a9.82 9.82 0 0 1 2.89 6.99c0 5.45-4.44 9.88-9.89 9.88zm8.41-18.3A11.82 11.82 0 0 0 12.040 0C5.5 0 .17 5.33.16 11.88c0 2.1.55 4.14 1.59 5.94L.06 24l6.3-1.65a11.86 11.86 0 0 0 5.68 1.45h.01c6.55 0 11.88-5.33 11.88-11.88 0-3.17-1.24-6.16-3.48-8.4z"/></svg>Message Us</a>
+      </div>
+    </div>
+  </div>
+  <section aria-labelledby="prod-desc-heading" style="display:flex;flex-direction:column;gap:10px;border-top:1px solid #e4e6ee;padding-top:32px">
+    <h2 id="prod-desc-heading" style="margin:0;font-size:22px;font-weight:800">Product description</h2>
+    <p itemprop="description" style="margin:0;font-size:16px;line-height:1.75;color:#3b3f57;text-wrap:pretty">{{ curProd.seo }}</p>
+  </section>
+  <section aria-labelledby="prod-faq-heading" itemscope itemtype="https://schema.org/FAQPage" style="display:flex;flex-direction:column;gap:18px">
+    <h2 id="prod-faq-heading" style="margin:0;font-size:24px;line-height:1.25;font-weight:800">Frequently asked questions about {{ curProd.name }}</h2>
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <sc-for list="{{ prodFaqs }}" as="f" hint-placeholder-count="6">
+        <details class="faq" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" style="background:#ffffff;border:1px solid #e4e6ee;border-radius:10px;padding:0 22px">
+          <summary style="display:flex;justify-content:space-between;align-items:center;gap:16px;padding:18px 0"><h3 itemprop="name" style="margin:0;font-size:16px;line-height:1.4;font-weight:700">{{ f.q }}</h3><span class="faq-plus" aria-hidden="true" style="flex:none;font-size:26px;line-height:1;color:#03acee">+</span></summary>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer" style="padding:0 0 18px"><p itemprop="text" style="margin:0;font-size:15px;line-height:1.75;color:#3b3f57">{{ f.a }}</p></div>
+        </details>
+      </sc-for>
+    </div>
+  </section>
+  <sc-if value="{{ hasRelated }}">
+  <section aria-labelledby="related-heading" style="display:flex;flex-direction:column;gap:20px">
+    <div style="display:flex;justify-content:space-between;align-items:end;gap:12px;flex-wrap:wrap">
+      <h2 id="related-heading" style="margin:0;font-size:24px;line-height:1.25;font-weight:800">Related products</h2>
+      <a onClick="{{ curProd.catGo }}" style="font-size:15px;font-weight:700;color:#03acee;cursor:pointer" style-hover="color:#f11a2b">View all in {{ curProd.catName }} →</a>
+    </div>
+    <sc-if value="{{ relMarquee }}">
+      <div class="cat-marquee">
+        <div class="cat-track">
+          <sc-for list="{{ related }}" as="r" hint-placeholder-count="6">
+              <article class="hov-card" onClick="{{ r.go }}" style="flex:none;width:260px;background:#ffffff;border:1px solid #e4e6ee;border-radius:10px;overflow:hidden;display:flex;flex-direction:column;cursor:pointer" style-hover="border-color:#03acee;box-shadow:0 10px 26px rgba(21,24,43,0.10)">
+                <div style="aspect-ratio:4/3;position:relative;background:#f4f5f8"><image-slot id="{{ r.relSlot }}" shape="rect" fit="contain" src="{{ r.mainImg }}" placeholder="Product shot"></image-slot></div>
+                <div style="padding:16px;display:flex;flex-direction:column;gap:6px">
+                  <span style="font-size:16px;font-weight:700;line-height:1.35">{{ r.name }}</span>
+                  <span style="font-size:14px;font-weight:700;color:#03acee">View product details →</span>
+                </div>
+              </article>
+          </sc-for>
+        </div>
+      </div>
+    </sc-if>
+    <sc-if value="{{ relStatic }}">
+      <div class="rel-static" style="display:flex;gap:20px;flex-wrap:wrap">
+        <sc-for list="{{ related }}" as="r" hint-placeholder-count="2">
+              <article class="hov-card" onClick="{{ r.go }}" style="flex:none;width:260px;background:#ffffff;border:1px solid #e4e6ee;border-radius:10px;overflow:hidden;display:flex;flex-direction:column;cursor:pointer" style-hover="border-color:#03acee;box-shadow:0 10px 26px rgba(21,24,43,0.10)">
+                <div style="aspect-ratio:4/3;position:relative;background:#f4f5f8"><image-slot id="{{ r.relSlot }}" shape="rect" fit="contain" src="{{ r.mainImg }}" placeholder="Product shot"></image-slot></div>
+                <div style="padding:16px;display:flex;flex-direction:column;gap:6px">
+                  <span style="font-size:16px;font-weight:700;line-height:1.35">{{ r.name }}</span>
+                  <span style="font-size:14px;font-weight:700;color:#03acee">View product details →</span>
+                </div>
+              </article>
+        </sc-for>
+      </div>
+    </sc-if>
+  </section>
+  </sc-if>
+</div>
+</sc-if>
+
+<!-- GALLERY -->
+<sc-if value="{{ isGallery }}">
+<div data-screen-label="Gallery">
+  <div style="color:#15182b">
+    <div style="max-width:1280px;margin:0 auto;padding:28px 24px 0;display:flex;flex-direction:column;gap:6px">
+      <span style="font-size:13px;color:#8a8fa6"><span onClick="{{ goHome }}" style="cursor:pointer" style-hover="color:#03acee">Home</span> / Gallery</span>
+      <h1 style="margin:0;font-size:30px;line-height:1.2;font-weight:800;text-wrap:pretty">Gallery</h1>
+      <p style="margin:0;font-size:15px;line-height:1.6;color:#5b6078;max-width:720px;text-wrap:pretty">A look inside our Sharjah showroom and the product displays for our building materials range.</p>
+    </div>
+  </div>
+  <div class="gallery-grid" style="max-width:1280px;margin:0 auto;padding:24px 24px 56px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px">
+    <sc-for list="{{ gallery }}" as="g" hint-placeholder-count="9">
+      <div class="hov-card" style="position:relative;width:100%;aspect-ratio:1/1;border-radius:10px;overflow:hidden;background:#e9ebf1"><image-slot id="{{ g.slot }}" shape="rect" src="{{ g.img }}" placeholder="{{ g.label }}"></image-slot></div>
+    </sc-for>
+  </div>
+</div>
+</sc-if>
+
+<!-- CONTACT -->
+<sc-if value="{{ isContact }}">
+<div data-screen-label="Contact Us">
+  <section data-hero aria-label="Contact Al Sughra Building Materials Trading LLC" style="position:relative;min-height:clamp(340px,38vw,520px);display:flex;align-items:center;overflow:hidden;background:#15182b">
+    <div style="position:absolute;inset:0">
+      <image-slot id="contact-hero-wide" shape="rect" src="assets/img/contact-hero-store.jpg" placeholder="Contact hero — showroom"></image-slot>
+    </div>
+    <div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(21,24,43,0.92) 0%,rgba(21,24,43,0.75) 40%,rgba(21,24,43,0.15) 100%);pointer-events:none"></div>
+    <div style="position:relative;width:100%;max-width:1280px;margin:0 auto;padding:56px 24px;pointer-events:none">
+      <div style="max-width:620px;display:flex;flex-direction:column;gap:18px;color:#ffffff">
+        <span style="font-size:13px;color:#c9cce0">Home / Contact Us</span>
+        <h1 style="margin:0;font-size:clamp(34px,4.4vw,52px);line-height:1.08;font-weight:800;text-wrap:balance">Contact Us</h1>
+        <p style="margin:0;font-size:18px;line-height:1.6;color:#e4e6ee;text-wrap:pretty">Visit our showroom on Maliha Road, Sharjah, or get in touch for quotes, stock availability and bulk delivery across the UAE.</p>
+      </div>
+    </div>
+  </section>
+  <div style="max-width:1280px;margin:0 auto;padding:40px 24px 56px;display:flex;flex-direction:column;gap:32px">
+    <section aria-labelledby="contact-page-heading" style="background:#f4f5f8;border-radius:12px;padding:20px;display:flex;flex-wrap:wrap;gap:20px">
+    <div style="flex:1 1 300px;background:#15182b;color:#ffffff;border-radius:10px;padding:32px 28px;display:flex;flex-direction:column;gap:22px">
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <h2 id="contact-page-heading" style="margin:0;font-size:28px;line-height:1.25;font-weight:800;text-wrap:balance">Get in touch with our team</h2>
+        <p style="margin:0;font-size:15px;line-height:1.7;color:#c9cce0">Call or email us for quotes, stock availability and bulk delivery across the UAE.</p>
+      </div>
+      <a href="tel:+97165431115" style="display:flex;gap:14px;align-items:center;color:#ffffff;text-decoration:none">
+        <span aria-hidden="true" style="flex:none;width:46px;height:46px;border-radius:50%;background:#f11a2b;display:flex;align-items:center;justify-content:center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.18 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.1 9.9a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>
+        <span style="display:flex;flex-direction:column;gap:2px"><span style="font-size:13px;color:#a3a7b8">Telephone</span><span style="font-size:18px;font-weight:700">+971 6 543 1115</span></span>
+      </a>
+      <a href="tel:+971506372683" style="display:flex;gap:14px;align-items:center;color:#ffffff;text-decoration:none">
+        <span aria-hidden="true" style="flex:none;width:46px;height:46px;border-radius:50%;background:#f11a2b;display:flex;align-items:center;justify-content:center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="2"/><path d="M11 18h2"/></svg></span>
+        <span style="display:flex;flex-direction:column;gap:2px"><span style="font-size:13px;color:#a3a7b8">Mobile</span><span style="font-size:18px;font-weight:700">+971 50 637 2683</span></span>
+      </a>
+      <a href="https://wa.me/971506372683" target="_blank" rel="noopener" style="display:flex;gap:14px;align-items:center;color:#ffffff;text-decoration:none">
+        <span aria-hidden="true" style="flex:none;width:46px;height:46px;border-radius:50%;background:#25d366;display:flex;align-items:center;justify-content:center"><svg width="22" height="22" viewBox="0 0 24 24" fill="#ffffff"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.08 1.76-.72 2.01-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35zM12.04 21.8h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.9-9.88 2.64 0 5.12 1.03 6.99 2.9a9.82 9.82 0 0 1 2.89 6.99c0 5.45-4.44 9.88-9.89 9.88zm8.41-18.3A11.82 11.82 0 0 0 12.04 0C5.5 0 .17 5.33.16 11.88c0 2.1.55 4.14 1.59 5.94L.06 24l6.3-1.65a11.86 11.86 0 0 0 5.68 1.45h.01c6.55 0 11.88-5.33 11.88-11.88 0-3.17-1.24-6.16-3.48-8.4z"/></svg></span>
+        <span style="display:flex;flex-direction:column;gap:2px"><span style="font-size:13px;color:#a3a7b8">WhatsApp</span><span style="font-size:18px;font-weight:700">+971 50 637 2683</span></span>
+      </a>
+      <a href="mailto:sughra88@yahoo.com" style="display:flex;gap:14px;align-items:center;color:#ffffff;text-decoration:none">
+        <span aria-hidden="true" style="flex:none;width:46px;height:46px;border-radius:50%;background:#03acee;display:flex;align-items:center;justify-content:center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></span>
+        <span style="display:flex;flex-direction:column;gap:2px;min-width:0"><span style="font-size:13px;color:#a3a7b8">Email</span><span style="font-size:18px;font-weight:700;overflow-wrap:anywhere">sughra88@yahoo.com</span></span>
+      </a>
+      <a href="https://goo.gl/maps/TTTuSeyrygEDe4yHA" target="_blank" rel="noopener" style="display:flex;gap:14px;align-items:center;color:#ffffff;text-decoration:none">
+        <span aria-hidden="true" style="flex:none;width:46px;height:46px;border-radius:50%;background:#2a2e4a;display:flex;align-items:center;justify-content:center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
+        <span style="display:flex;flex-direction:column;gap:2px"><span style="font-size:13px;color:#a3a7b8">Address</span><span style="font-size:15px;font-weight:600;line-height:1.5">Maliha Road, Opposite Al Ghurair Exchange, Sharjah, UAE</span></span>
+      </a>
+    </div>
+    <div style="flex:2 1 520px;min-width:0;background:#ffffff;border:1px solid #e4e6ee;border-radius:10px;padding:28px;display:flex;flex-direction:column;gap:18px">
+      <h2 style="margin:0;font-size:22px;font-weight:800;letter-spacing:0.02em">SEND US A MESSAGE</h2>
+      <sc-if value="{{ sent }}">
+        <div style="background:#e6f7fe;border:1px solid #9ed2f5;color:#15182b;padding:14px 16px;border-radius:6px;font-size:14px">Thank you. Your message has been sent — our team will get back to you shortly.</div>
+      </sc-if>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px">
+        <label style="display:flex;flex-direction:column;gap:6px;font-size:13px;font-weight:600">Name<input style="border:1px solid #d3d6e2;border-radius:6px;padding:11px 12px;font-size:14px"></label>
+        <label style="display:flex;flex-direction:column;gap:6px;font-size:13px;font-weight:600">E-mail<input type="email" style="border:1px solid #d3d6e2;border-radius:6px;padding:11px 12px;font-size:14px"></label>
+        <label style="display:flex;flex-direction:column;gap:6px;font-size:13px;font-weight:600">Contact Number<input type="tel" style="border:1px solid #d3d6e2;border-radius:6px;padding:11px 12px;font-size:14px"></label>
+        <label style="display:flex;flex-direction:column;gap:6px;font-size:13px;font-weight:600">Company Name<input type="text" autocomplete="organization" style="border:1px solid #d3d6e2;border-radius:6px;padding:11px 12px;font-size:14px"></label>
+      </div>
+      <label style="display:flex;flex-direction:column;gap:6px;font-size:13px;font-weight:600">Message<textarea rows="5" style="border:1px solid #d3d6e2;border-radius:6px;padding:11px 12px;font-size:14px;resize:vertical"></textarea></label>
+      <button onClick="{{ send }}" style="align-self:start;border:none;background:#f11a2b;color:#ffffff;padding:14px 30px;border-radius:6px;font-weight:700;font-size:15px;cursor:pointer" style-hover="background:#d10f1f">Send message</button>
+    </div>
+    </section>
+  </div>
+  <!-- Full-width map -->
+  <section aria-label="Map to Al Sughra Building Material Trading LLC" style="width:100%;background:#e4e6ee;line-height:0">
+    <iframe title="Al Sughra Building Material Trading LLC on Google Maps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3606.58578190111!2d55.408714499999995!3d25.318117299999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f599d3ad4a601%3A0x964e15d1a0bcc34c!2sAl%20Sughra%20Building%20Material%20Trading%20LLC!5e0!3m2!1sen!2sae!4v1793340072003!5m2!1sen!2sae" width="600" height="450" style="border:0;display:block;width:100%;height:clamp(320px,38vw,480px)" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+  </section>
+  <!-- Company highlights -->
+  <div style="max-width:1280px;margin:0 auto;padding:48px 24px 56px;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px">
+    <div style="background:#ffffff;border-top:3px solid #f11a2b;border-radius:8px;padding:24px;display:flex;flex-direction:column;gap:6px"><span style="font-size:32px;font-weight:800;color:#03acee">20+</span><span style="font-size:14px;color:#5b6078">Years of Excellence in Building Materials</span></div>
+    <div style="background:#ffffff;border-top:3px solid #03acee;border-radius:8px;padding:24px;display:flex;flex-direction:column;gap:6px"><span style="font-size:32px;font-weight:800;color:#03acee">3 + 3</span><span style="font-size:14px;color:#5b6078">Warehouses and branch offices</span></div>
+    <div style="background:#ffffff;border-top:3px solid #03acee;border-radius:8px;padding:24px;display:flex;flex-direction:column;gap:6px"><span style="font-size:20px;font-weight:800;color:#03acee;line-height:1.3">“Quality first, Clients foremost”</span><span style="font-size:14px;color:#5b6078">Our business tenet</span></div>
+  </div>
+</div>
+</sc-if>
+</main>
+
+<!-- Footer -->
+<footer style="background:#15182b;color:#c9cce0">
+  <div style="max-width:1280px;margin:0 auto;padding:48px 24px 32px;display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:36px">
+    <div style="display:flex;flex-direction:column;gap:16px">
+      <div style="background:#ffffff;padding:10px 12px;border-radius:6px;align-self:start"><img src="assets/asbm-logo.webp" alt="ASBM" style="height:44px;display:block"></div>
+      <p style="margin:0;font-size:14px;line-height:1.65">We abide by the business principle ” Quality first, Client foremost”. Being in the market for over a decade, we have succeeded to attract the Middle East by formulating different kinds of construction materials discovering its application in architecture and interior decor.</p>
+      <div aria-label="Follow us" style="display:flex;gap:10px;margin-top:4px">
+        <a href="https://www.facebook.com/AlSughraBuilding/" target="_blank" rel="noopener" aria-label="Al Sughra Building Materials on Facebook" title="Facebook" style="display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,0.08);color:#ffffff" style-hover="background:#03acee;color:#ffffff"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14 8.5V6.8c0-.8.5-1 1-1h2.3V2.1L14.2 2C10.9 2 10 4.4 10 6.3v2.2H7.6v3.8H10V22h4v-9.7h3l.4-3.8H14z"/></svg></a>
+        <a href="https://www.linkedin.com/company/asbmuae/?originalSubdomain=ae" target="_blank" rel="noopener" aria-label="Al Sughra Building Materials on LinkedIn" title="LinkedIn" style="display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,0.08);color:#ffffff" style-hover="background:#03acee;color:#ffffff"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.5h4V21H3zM9.5 9.5h3.8v1.6h.06c.53-1 1.83-2.06 3.77-2.06 4.03 0 4.77 2.65 4.77 6.1V21h-4v-5.2c0-1.24-.02-2.84-1.73-2.84-1.73 0-2 1.35-2 2.75V21h-4z"/></svg></a>
+        <a href="https://www.instagram.com/asbmuae/" target="_blank" rel="noopener" aria-label="Al Sughra Building Materials on Instagram" title="Instagram" style="display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,0.08);color:#ffffff" style-hover="background:#03acee;color:#ffffff"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.6" fill="currentColor"/></svg></a>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <span style="color:#ffffff;font-weight:700;font-size:15px">Quick Links</span>
+      <span onClick="{{ goAbout }}" style="cursor:pointer;font-size:14px" style-hover="color:#ffffff">About Us</span>
+      <span onClick="{{ goProducts }}" style="cursor:pointer;font-size:14px" style-hover="color:#ffffff">Products</span>
+      <span onClick="{{ goGallery }}" style="cursor:pointer;font-size:14px" style-hover="color:#ffffff">Gallery</span>
+      <span onClick="{{ goContact }}" style="cursor:pointer;font-size:14px" style-hover="color:#ffffff">Contact Us</span>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <span style="color:#ffffff;font-weight:700;font-size:15px">Products</span>
+      <sc-for list="{{ cats }}" as="c" hint-placeholder-count="5">
+        <span onClick="{{ c.go }}" style="cursor:pointer;font-size:14px;line-height:1.4" style-hover="color:#ffffff">{{ c.name }}</span>
+      </sc-for>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:12px;font-size:14px;line-height:1.6">
+      <span style="color:#ffffff;font-weight:700;font-size:15px">Get In Touch</span>
+      <span>Maliha Road, Opposite Al Ghurair Exchange, Beside Al Omran Trading, Sharjah</span>
+      <span>Email: <a href="mailto:sughra88@yahoo.com" style="color:#ffffff">sughra88@yahoo.com</a></span>
+      <span>Tel: <a href="tel:+97165431115" style="color:#ffffff">+971 6 543 1115</a></span>
+      <span>Mobile: <a href="tel:+971506372683" style="color:#ffffff">+971 50 637 2683</a></span>
+      <span>WhatsApp: <a href="https://wa.me/971506372683" target="_blank" rel="noopener" style="color:#ffffff">+971 50 637 2683</a></span>
+    </div>
+  </div>
+  <div style="border-top:1px solid rgba(255,255,255,0.1)">
+    <div style="max-width:1280px;margin:0 auto;padding:18px 24px;font-size:13px;color:#8a8ea3;display:flex;flex-wrap:wrap;justify-content:space-between;gap:6px 24px"><span>Copyright © 2026 Al Sughra Building Materials. All rights reserved.</span><span>Powered by LUNAD Digital Portal LLC</span></div>
+  </div>
+</footer>
+<!-- Image pop-up (home gallery) -->
+<sc-if value="{{ lightboxOpen }}">
+<div role="dialog" aria-modal="true" aria-label="{{ lightbox.label }}" style="position:fixed;inset:0;z-index:2100;display:flex;align-items:center;justify-content:center;padding:16px">
+  <div onClick="{{ closeLightbox }}" style="position:absolute;inset:0;background:rgba(21,24,43,0.75)"></div>
+  <div style="position:relative;width:min(500px,calc(100vw - 32px));height:min(500px,calc(100vw - 32px));background:#ffffff;border-radius:10px;overflow:hidden;box-shadow:0 24px 64px rgba(0,0,0,0.35)">
+    <img src="{{ lightbox.img }}" alt="{{ lightbox.label }}" style="display:block;width:100%;height:100%;object-fit:cover">
+    <button onClick="{{ closeLightbox }}" aria-label="Close" style="position:absolute;top:10px;right:10px;width:38px;height:38px;border:none;border-radius:50%;background:rgba(255,255,255,0.92);color:#15182b;font-size:22px;line-height:1;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,0.2)" style-hover="background:#ffffff">×</button>
+  </div>
+</div>
+</sc-if>
+<!-- Quote request pop-up (all pages) -->
+<sc-if value="{{ quoteOpen }}">
+<div role="dialog" aria-modal="true" aria-labelledby="quote-heading" style="position:fixed;inset:0;z-index:2000;display:flex;align-items:center;justify-content:center;padding:16px">
+  <div onClick="{{ closeQuote }}" style="position:absolute;inset:0;background:rgba(21,24,43,0.65)"></div>
+  <div style="position:relative;width:100%;max-width:640px;max-height:calc(100vh - 32px);overflow:auto;background:#ffffff;border-radius:12px;box-shadow:0 24px 64px rgba(0,0,0,0.3);padding:28px;display:flex;flex-direction:column;gap:18px">
+    <button onClick="{{ closeQuote }}" aria-label="Close" style="position:absolute;top:12px;right:12px;width:38px;height:38px;border:none;border-radius:50%;background:#f4f5f8;color:#15182b;font-size:22px;line-height:1;cursor:pointer" style-hover="background:#e4e6ee">×</button>
+    <div style="display:flex;flex-direction:column;gap:8px;padding-right:40px">
+      <span style="font-size:13px;font-weight:700;letter-spacing:0.16em;color:#f11a2b">REQUEST A QUOTE</span>
+      <h2 id="quote-heading" style="margin:0;font-size:24px;line-height:1.25;font-weight:800">Tell us what you need</h2>
+      <p style="margin:0;font-size:15px;line-height:1.6;color:#5b6078">Share your materials, quantities and delivery location, and our team will get back to you with a quotation.</p>
+    </div>
+    <sc-if value="{{ quoteSent }}">
+      <div style="background:#e6f7fe;border:1px solid #9ed2f5;color:#15182b;padding:14px 16px;border-radius:6px;font-size:14px">Thank you. Your request has been sent — our team will get back to you shortly.</div>
+    </sc-if>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px">
+      <label style="display:flex;flex-direction:column;gap:6px;font-size:13px;font-weight:600">Name<input autocomplete="name" style="border:1px solid #d3d6e2;border-radius:6px;padding:11px 12px;font-size:14px"></label>
+      <label style="display:flex;flex-direction:column;gap:6px;font-size:13px;font-weight:600">E-mail<input type="email" autocomplete="email" style="border:1px solid #d3d6e2;border-radius:6px;padding:11px 12px;font-size:14px"></label>
+      <label style="display:flex;flex-direction:column;gap:6px;font-size:13px;font-weight:600">Contact Number<input type="tel" autocomplete="tel" style="border:1px solid #d3d6e2;border-radius:6px;padding:11px 12px;font-size:14px"></label>
+      <label style="display:flex;flex-direction:column;gap:6px;font-size:13px;font-weight:600">Company Name<input type="text" autocomplete="organization" style="border:1px solid #d3d6e2;border-radius:6px;padding:11px 12px;font-size:14px"></label>
+    </div>
+    <label style="display:flex;flex-direction:column;gap:6px;font-size:13px;font-weight:600">Message<textarea rows="5" placeholder="Materials, quantities and delivery location" style="border:1px solid #d3d6e2;border-radius:6px;padding:11px 12px;font-size:14px;resize:vertical"></textarea></label>
+    <div style="display:flex;gap:12px;flex-wrap:wrap;align-items:center">
+      <button onClick="{{ sendQuote }}" style="border:none;background:#f11a2b;color:#ffffff;padding:14px 30px;border-radius:6px;font-weight:700;font-size:15px;cursor:pointer" style-hover="background:#d10f1f">Send request</button>
+      <button onClick="{{ closeQuote }}" style="border:1.5px solid #d3d6e2;background:#ffffff;color:#15182b;padding:13px 24px;border-radius:6px;font-weight:600;font-size:15px;cursor:pointer" style-hover="border-color:#15182b">Cancel</button>
+    </div>
+  </div>
+</div>
+</sc-if>
+<!-- Mobile sticky product CTA -->
+<sc-if value="{{ stickyCta }}">
+<div class="sticky-cta" style="position:fixed;left:0;right:0;bottom:0;z-index:900;display:none;gap:10px;padding:10px 16px calc(10px + env(safe-area-inset-bottom));background:#ffffff;border-top:1px solid #e4e6ee;box-shadow:0 -6px 18px rgba(21,24,43,0.10)">
+  <button onClick="{{ openQuote }}" style="border:none;background:#03acee;color:#ffffff;padding:13px 10px;flex:1;white-space:nowrap;border-radius:6px;font-weight:700;font-size:15px;cursor:pointer" style-hover="background:#0293cc">Send enquiry</button>
+  <a href="{{ curProd.waLink }}" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:10px;border:none;background:#4cc247;color:#ffffff;padding:13px 10px;flex:1;justify-content:center;white-space:nowrap;border-radius:6px;font-weight:500;font-size:15px;box-shadow:0 4px 12px rgba(0,0,0,0.12)" style-hover="background:#3fb03a;color:#ffffff"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.870.12.57-.08 1.76-.72 2.01-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35zM12.04 21.8h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.9-9.88 2.64 0 5.12 1.03 6.99 2.9a9.82 9.82 0 0 1 2.89 6.99c0 5.45-4.44 9.88-9.89 9.88zm8.41-18.3A11.82 11.82 0 0 0 12.040 0C5.5 0 .17 5.33.16 11.88c0 2.1.55 4.14 1.59 5.94L.06 24l6.3-1.65a11.86 11.86 0 0 0 5.68 1.45h.01c6.55 0 11.88-5.33 11.88-11.88 0-3.17-1.24-6.16-3.48-8.4z"/></svg>Message Us</a>
+</div>
+</sc-if>
+<!-- Floating WhatsApp button (all pages except product details) -->
+<sc-if value="{{ showFloatWa }}">
+<a class="wa-float" href="https://wa.me/971506372683" target="_blank" rel="noopener" aria-label="Chat with us on WhatsApp" title="Chat with us on WhatsApp" style="position:fixed;right:clamp(16px,2.5vw,28px);bottom:clamp(16px,2.5vw,28px);z-index:1000;width:60px;height:60px;border-radius:50%;background:#25d366;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(21,24,43,0.25)"><svg width="32" height="32" viewBox="0 0 24 24" fill="#ffffff" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.870.12.57-.08 1.76-.72 2.01-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35zM12.04 21.8h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.9-9.88 2.64 0 5.12 1.03 6.99 2.9a9.82 9.82 0 0 1 2.89 6.99c0 5.45-4.44 9.88-9.89 9.88zm8.41-18.3A11.82 11.82 0 0 0 12.040 0C5.5 0 .17 5.33.16 11.88c0 2.1.55 4.14 1.59 5.94L.06 24l6.3-1.65a11.86 11.86 0 0 0 5.68 1.45h.01c6.55 0 11.88-5.33 11.88-11.88 0-3.17-1.24-6.16-3.48-8.4z"/></svg></a>
+</sc-if>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { q: '', qFocus: false, stickyCta: false, heroOpen: false, mob: false, imgIdx: 0, lightbox: null, pastHero: false, page: 'home', cat: 0, prod: 'p1', menu: false, tab: 0, sent: false, quote: false, quoteSent: false, now: Date.now() };
+  CATS = [
+    { name: 'Tiling & Flooring Accessories', short: 'TILING & FLOORING', img: 'assets/img/Tiling-and-Flooring-Accessories.png', desc: 'For tile installation, floor transitions and finishing.', seo: 'Shop tiling and flooring accessories in Sharjah and across the UAE from Al Sughra Building Materials. We supply aluminium expansion cover joints, carpet profiles, stair nosing, tile leveling systems and tile trims for neat, durable tile installations, floor transitions and finishing in residential and commercial projects.', card: 'Tiling and flooring accessories in Sharjah, UAE: aluminium expansion cover joints, carpet profiles, stair nosing, tile leveling systems and tile trims for neat, durable floor and wall finishes.' },
+    { name: 'Drywall, Plastering & Ceiling Systems', short: 'DRYWALL & CEILING', img: 'assets/img/Drywall-Plastering-and-Ceiling-Systems.png', desc: 'For gypsum partitions, plastering, ceilings and wall reinforcement.', seo: 'Buy drywall, plastering and ceiling systems in Sharjah, UAE. Al Sughra Building Materials supplies beads, laths and block reinforcement, ceiling tiles, fiberglass mesh, gypsum partition and ceiling accessories, and PVC beads with corner mesh for partitions, false ceilings and plastering.', card: 'Drywall, plastering and ceiling supplies in the UAE: plaster beads and laths, fiberglass mesh, ceiling tiles and gypsum partition accessories for strong partitions and crack-free walls.' },
+    { name: 'Concrete & Masonry Accessories', short: 'CONCRETE & MASONRY', img: 'assets/img/Concrete-and-Masonry-Accessories.png', desc: 'For concrete casting, reinforcement and masonry construction.', seo: 'Find concrete and masonry accessories in Sharjah and across the UAE. Al Sughra Building Materials supplies glass blocks and spacers, PVC and steel chamfers, PVC rebar and fibre concrete spacers, and PVC waterstops for concrete casting, reinforcement, waterproof joints and masonry construction.', card: 'Concrete and masonry accessories in Sharjah: PVC rebar and fibre spacers, PVC and steel chamfers, PVC waterstops and glass blocks for accurate casting and watertight construction.' },
+    { name: 'Sealing, Jointing & Protection Materials', short: 'SEALING & JOINTING', img: 'assets/img/Sealing-Jointing-and-Protection-Materials.png', desc: 'For joint preparation, sealing and surface protection.', seo: 'Source sealing, jointing and protection materials in Sharjah, UAE from Al Sughra Building Materials. We supply PE backing rod, underlay and sheet, and a range of construction tapes for joint preparation, sealing, masking and surface protection on residential and commercial projects.', card: 'Sealing, jointing and protection materials in the UAE: PE backing rod, underlay and sheet plus construction tapes for clean joint preparation, sealing, masking and surface protection.' },
+    { name: 'Scaffolding & Architectural Products', short: 'SCAFFOLDING & ARCH.', img: 'assets/img/Scaffolding-and-Architectural-Products.png', desc: 'For safe access at height and decorative architectural finishing.', seo: 'Get scaffolding and architectural products in Sharjah and across the UAE. Al Sughra Building Materials supplies aluminium scaffolding and ladders for safe access at height, and PU decorative products such as cornices and mouldings that add elegant detail to walls and ceilings.', card: 'Scaffolding and architectural products in Sharjah: lightweight aluminium scaffolding and ladders for safe work at height, and PU decorative cornices and mouldings for elegant interiors.' }
+  ];
+  PRODUCTS = [
+    { id: 't1', c: 0, name: 'Aluminium Expansion Cover Joint', mat: "Aluminium", fin: "Mill finish and anodised options", size: "Multiple joint widths and standard lengths", use: "Covering and protecting expansion joints in floors and walls", choose: "Match the cover to the joint width, the expected movement and the floor finish, and choose a heavier-duty profile for high-traffic or trolley areas.", seo: "Aluminium expansion cover joints from Al Sughra Building Materials, Sharjah. Durable profiles that bridge and protect floor and wall expansion joints, allow structural movement and give a neat, safe finish in malls, offices, car parks and homes. Bulk supply across the UAE.", imgs: ["assets/products/t1-1.jpg", "assets/products/t1-2.jpg", "assets/products/t1-3.jpg", "assets/products/t1-4.jpg", "assets/products/t1-5.jpg", "assets/products/t1-6.jpg", "assets/products/t1-7.jpg", "assets/products/t1-8.jpg"] },
+    { id: 't2', c: 0, name: 'Carpet Profiles', mat: "Aluminium and PVC", fin: "Silver, gold and bronze tones", size: "Multiple heights and standard lengths", use: "Finishing carpet edges and transitions between carpet and other floor finishes", choose: "Select the profile height to match the carpet thickness and the adjoining floor level, then pick a finish that suits the interior.", seo: "Carpet profiles in Sharjah and across the UAE from Al Sughra Building Materials. Aluminium and PVC edge and transition profiles that secure carpet edges, prevent fraying and create smooth, safe transitions to tile, wood or vinyl floors in homes, hotels and offices.", imgs: ["assets/products/t2-1.jpg", "assets/products/t2-2.jpg", "assets/products/t2-3.jpg", "assets/products/t2-4.jpg", "assets/products/t2-5.jpg"] },
+    { id: 't3', c: 0, name: 'Stair Nosing', mat: "Aluminium, stainless steel and PVC", fin: "Anti-slip ribbed or insert options", size: "Multiple widths and standard lengths", use: "Protecting stair edges and improving grip and visibility on steps", choose: "Choose the nosing to suit the stair finish (tile, stone or vinyl), the level of foot traffic and whether a contrasting anti-slip insert is needed.", seo: "Stair nosing in Sharjah, UAE from Al Sughra Building Materials. Anti-slip aluminium, stainless steel and PVC nosing profiles that protect step edges, improve grip and visibility, and give tiled or stone stairs a clean, durable finish in homes and commercial buildings.", imgs: ["assets/products/t3-1.jpg", "assets/products/t3-2.jpg", "assets/products/t3-3.jpg", "assets/products/t3-4.jpg", "assets/products/t3-5.jpg"] },
+    { id: 'p1', c: 0, name: 'Tile Leveling System', mat: "Plastic clips with reusable wedges or caps", fin: "", size: "Clips for different tile thicknesses and joint widths", use: "Keeping wall and floor tiles flat and level during installation to prevent lippage", choose: "Pick clips that match your tile thickness and joint width, and use more clips per tile on large-format tiles.", seo: "Tile leveling systems in Sharjah and across the UAE. Clips, wedges and caps from Al Sughra Building Materials keep wall and floor tiles flat and evenly spaced while adhesive sets, preventing lippage on large-format tiles and speeding up installation. Bulk packs available.", imgs: ["assets/products/p1-1.jpg", "assets/products/p1-2.jpg"] },
+    { id: 't5', c: 0, name: 'Tile Trims', mat: "Aluminium, stainless steel and PVC", fin: "Multiple colours and metallic finishes", size: "Profiles for different tile thicknesses, standard lengths", use: "Finishing and protecting exposed tile edges and external corners", choose: "Match the trim height to the tile thickness, then choose a profile shape (square, round or L-angle) and a finish that suits the design.", seo: "Tile trims in Sharjah, UAE from Al Sughra Building Materials. Aluminium, stainless steel and PVC edge trims that protect exposed edges and corners of wall and floor tiles, prevent chipping and add a clean decorative finish. Multiple profiles, sizes and finishes available.", imgs: ["assets/products/t5-1.jpg", "assets/products/t5-2.jpg", "assets/products/t5-3.jpg", "assets/products/t5-4.jpg", "assets/products/t5-5.jpg"] },
+    { id: 'd1', c: 1, name: "Beads, Laths and Block Reinforcement", mat: "Galvanised steel", fin: "", size: "Standard lengths and widths", use: "Reinforcing plaster edges, render backgrounds and blockwork joints", choose: "Choose corner or stop beads for plaster edges, metal lath to reinforce render over mixed backgrounds, and block reinforcement for masonry courses, matched to the plaster thickness and wall type.", seo: "Beads, laths and block reinforcement from Al Sughra Building Materials, Sharjah. Galvanised corner and stop beads, metal lath and blockwork mesh that protect plaster edges, reinforce render and strengthen masonry walls against cracking. Bulk supply across the UAE.", imgs: ["assets/products/d1-1.jpg"] },
+    { id: 'd2', c: 1, name: "Ceiling Tiles", mat: "Gypsum, mineral fibre and PVC options", fin: "Plain, textured and decorative designs", size: "Standard grid sizes such as 600 × 600 mm", use: "Suspended ceilings in offices, shops, homes and public buildings", choose: "Match the tile size to your ceiling grid, then choose the material and finish for the room: moisture-resistant tiles for humid areas and decorative designs for feature ceilings.", seo: "Ceiling tiles in Sharjah and across the UAE from Al Sughra Building Materials. Gypsum, mineral fibre and PVC tiles in plain, textured and decorative designs for suspended ceilings in offices, shops, homes and public buildings. Wholesale and project supply.", imgs: ["assets/products/d2-1.jpg", "assets/products/d2-2.jpg", "assets/products/d2-3.jpg", "assets/products/d2-4.jpg", "assets/products/d2-5.jpg", "assets/products/d2-6.jpg", "assets/products/d2-7.jpg", "assets/products/d2-8.jpg", "assets/products/d2-9.jpg", "assets/products/d2-10.jpg", "assets/products/d2-11.jpg", "assets/products/d2-12.jpg"] },
+    { id: 'd3', c: 1, name: "Fiberglass Mesh", mat: "Alkali-resistant fiberglass", fin: "", size: "Rolls in multiple widths", use: "Reinforcing plaster, render, skim coats and board joints to prevent cracking", choose: "Select the mesh weight and opening size to suit the plaster or render thickness, and use alkali-resistant mesh with cement-based products.", seo: "Fiberglass mesh in Sharjah, UAE from Al Sughra Building Materials. Alkali-resistant mesh rolls that reinforce plaster, render, skim coats and board joints, controlling cracks on internal and external walls in new builds, renovations and facades. Bulk rolls available.", imgs: ["assets/products/d3-1.jpg"] },
+    { id: 'd4', c: 1, name: "Gypsum Partition & Ceiling Accessories", mat: "Galvanised steel", fin: "", size: "Standard lengths and gauges", use: "Building gypsum board partitions and false ceilings with studs, tracks, channels, angles and hangers", choose: "Size studs and tracks to the partition height and number of board layers, and choose ceiling channels, hangers and angles to suit the ceiling span and load.", seo: "Gypsum partition and ceiling accessories from Al Sughra Building Materials, Sharjah. Galvanised studs, tracks, furring channels, angles and hangers for strong, straight drywall partitions and false ceilings. Wholesale prices and bulk delivery across the UAE.", imgs: ["assets/products/d4-1.jpg"] },
+    { id: 'd5', c: 1, name: "PVC Beads & Corner Mesh", mat: "PVC with fiberglass mesh wings", fin: "", size: "Standard lengths", use: "Forming straight, crack-resistant plaster corners and edges, especially in humid areas", choose: "Choose the bead profile for corners, edges or expansion details and the size to match the plaster thickness. PVC is ideal where corrosion is a concern.", seo: "PVC beads and corner mesh in Sharjah, UAE from Al Sughra Building Materials. Rust-free PVC corner beads with mesh wings that form straight, durable plaster corners and edges and resist cracking, ideal for bathrooms, kitchens and humid areas. Bulk supply across the UAE.", imgs: ["assets/products/d5-1.jpg"] },
+    { id: 'c1', c: 2, name: "Glass Blocks and Spacer", mat: "Glass blocks with plastic spacers", fin: "Clear and patterned designs", size: "Standard block sizes with matching spacers", use: "Building light-transmitting walls, partitions and windows with neat, even joints", choose: "Choose the block size and pattern for the level of light and privacy you need, and use spacers that match the block size and joint width for straight, even courses.", seo: "Glass blocks and spacers from Al Sughra Building Materials, Sharjah. Clear and patterned glass blocks with matching spacers for bright, durable feature walls, partitions and windows with straight, even joints in homes, offices and commercial interiors across the UAE.", imgs: ["assets/products/c1-1.jpg", "assets/products/c1-2.jpg", "assets/products/c1-3.jpg", "assets/products/c1-4.jpg", "assets/products/c1-5.jpg", "assets/products/c1-6.jpg", "assets/products/c1-7.jpg"] },
+    { id: 'c2', c: 2, name: "PVC & Steel Chamfers", mat: "PVC and steel", fin: "", size: "Multiple profile sizes and standard lengths", use: "Forming clean bevelled edges on concrete columns, beams and walls during casting", choose: "Choose PVC chamfers for lightweight, reusable formwork edges and steel chamfers for heavy-duty, repeated use, sized to the edge bevel required.", seo: "PVC and steel chamfers from Al Sughra Building Materials in Sharjah. Formwork chamfer strips that create clean, bevelled edges on concrete columns, beams and walls, reducing chipping and giving a professional finish. Wholesale supply for contractors across the UAE.", imgs: ["assets/products/c2-1.jpg"] },
+    { id: 'c3', c: 2, name: "PVC Rebar & Fibre Concrete Spacers", mat: "PVC and fibre-reinforced concrete", fin: "", size: "Multiple cover heights and types", use: "Holding reinforcement bars at the correct concrete cover in slabs, beams, columns and walls", choose: "Select the spacer height to give the concrete cover in your drawings; use PVC spacers for general work and fibre concrete spacers where a concrete-compatible spacer is specified.", seo: "PVC rebar and fibre concrete spacers from Al Sughra Building Materials, Sharjah. They hold reinforcement at the correct concrete cover in slabs, beams, columns and walls, protecting steel from corrosion and ensuring structural quality. Bulk supply across the UAE.", imgs: ["assets/products/c3-1.jpg", "assets/products/c3-2.jpg", "assets/products/c3-3.jpg", "assets/products/c3-4.jpg", "assets/products/c3-5.jpg", "assets/products/c3-6.jpg"] },
+    { id: 'c4', c: 2, name: "PVC Waterstops", mat: "PVC", fin: "", size: "Multiple widths and profiles, supplied in rolls", use: "Sealing construction and expansion joints in concrete against water penetration", choose: "Choose the waterstop profile and width for the joint type (construction or expansion) and the water pressure, and position it centrally in the joint during casting.", seo: "PVC waterstops from Al Sughra Building Materials in Sharjah. Flexible PVC profiles cast into concrete construction and expansion joints to stop water passing through basements, tanks, tunnels and retaining walls. Wholesale and project supply across the UAE.", imgs: ["assets/products/c4-1.jpg", "assets/products/c4-2.jpg"] },
+    { id: 's1', c: 3, name: "PE Backing Rod, Underlay & Sheet", mat: "Closed-cell polyethylene (PE) foam", fin: "", size: "Backing rod in multiple diameters; underlay and sheet in rolls", use: "Filling and backing joints before sealing, and cushioning or separating layers under floors and screeds", choose: "Choose a backing rod slightly wider than the joint for a tight fit, and select the underlay or sheet thickness to suit the floor finish or separation layer required.", seo: "PE backing rod, underlay and sheet from Al Sughra Building Materials, Sharjah. Closed-cell polyethylene foam that controls sealant depth in joints, and underlay and sheets that cushion, separate and protect floors and screeds. Bulk rolls with delivery across the UAE.", imgs: ["assets/products/s1-1.jpg", "assets/products/s1-2.jpg"] },
+    { id: 's2', c: 3, name: "Tapes", mat: "Paper, cloth, PVC and fiberglass options", fin: "", size: "Multiple widths and roll lengths", use: "Masking, joint taping, sealing and surface protection on construction and finishing work", choose: "Choose masking tape for clean paint and sealant lines, fiberglass or paper joint tape for drywall joints, and protective or duct tape for sealing and covering surfaces.", seo: "Construction tapes in Sharjah, UAE from Al Sughra Building Materials. Masking, drywall joint, duct and protection tapes for clean paint and sealant lines, strong board joints and covering finished surfaces on site. Wholesale and project supply with delivery across the UAE.", imgs: ["assets/products/s2-1.jpg", "assets/products/s2-2.jpg", "assets/products/s2-3.jpg", "assets/products/s2-4.jpg", "assets/products/s2-5.jpg"] },
+    { id: 'a1', c: 4, name: "PU Decorative Products", mat: "Polyurethane (PU)", fin: "Primed white, ready to paint", size: "Multiple profiles, designs and lengths", use: "Decorative cornices, mouldings, ceiling roses and trims for interior walls and ceilings", choose: "Choose the profile size and design to suit the room height and interior style, and use the recommended PU adhesive for fixing and joints before painting.", seo: "PU decorative products from Al Sughra Building Materials, Sharjah. Lightweight polyurethane cornices, mouldings, ceiling roses and trims that add elegant architectural detail to walls and ceilings, are easy to install and ready to paint. Supplied across the UAE.", imgs: ["assets/products/a1-1.jpg"] },
+    { id: 'a2', c: 4, name: "Aluminium Scaffolding & Ladder", mat: "Aluminium", fin: "", size: "Multiple heights and configurations", use: "Safe, lightweight access for working at height on construction, maintenance and fit-out work", choose: "Choose the working height and type (step ladder, extension ladder or mobile scaffold tower) for the job, and check the load rating and site safety requirements.", seo: "Aluminium scaffolding and ladders from Al Sughra Building Materials in Sharjah. Lightweight, corrosion-resistant step ladders, extension ladders and scaffold towers for safe access at height on construction, maintenance and fit-out work. Supplied across the UAE.", imgs: ["assets/products/a2-1.jpg"] }
+  ];
+  GALLERY = [
+    { label: "Showroom display: rubber parking products, formwork accessories and PVC drywall beads", img: 'assets/gallery/gallery-01.jpg' },
+    { label: "ASBM showroom entrance with decorative ceiling tiles", img: 'assets/gallery/gallery-02.jpg' },
+    { label: "ASBM reception counter and PVC waterstop display", img: 'assets/gallery/gallery-03.jpg' },
+    { label: "Showroom display: tile profiles, decorative cornices and gypsum partition systems", img: 'assets/gallery/gallery-04.jpg' },
+    { label: "Inside the ASBM showroom, Sharjah", img: 'assets/gallery/gallery-05.jpg' },
+    { label: "Stainless steel tile trim display", img: 'assets/gallery/gallery-06.jpg' },
+    { label: "Square edge tile profiles display", img: 'assets/gallery/gallery-07.jpg' },
+    { label: "L-angle tile trims display", img: 'assets/gallery/gallery-08.jpg' },
+    { label: "Decorative profiles display", img: 'assets/gallery/gallery-09.jpg' },
+    { label: "Gold, silver and black decorative profiles", img: 'assets/gallery/gallery-10.jpg' },
+    { label: "Round edge stainless steel tile trims", img: 'assets/gallery/gallery-11.jpg' },
+    { label: "Coloured aluminium tile trims", img: 'assets/gallery/gallery-12.jpg' },
+    { label: "Expansion joint fillers, waterstops and separation sheets", img: 'assets/gallery/gallery-13.jpg' },
+    { label: "Rebar spacers, metal lath and masonry accessories", img: 'assets/gallery/gallery-14.jpg' },
+    { label: "Drywall profiles, corner beads and ceiling accessories", img: 'assets/gallery/gallery-15.jpg' }
+  ];
+  componentDidMount() {
+    // Clean URLs (only on the live site, not inside the design editor)
+    this.routing = window.top === window && /^https?:$/.test(location.protocol);
+    if (this.routing) {
+      const r = this.parseUrl();
+      this.go(r.page, r, true);
+      history.replaceState(null, '', this.urlFor(r.page, r.cat ?? this.state.cat, r.prod ?? this.state.prod));
+      this.onPop = () => { const r2 = this.parseUrl(); this.go(r2.page, r2, true); };
+      window.addEventListener('popstate', this.onPop);
+    }
+    this.t = setInterval(() => this.setState({ now: Date.now() }), 1000);
+    this.onScroll = () => {
+      const header = document.querySelector('header');
+      const hero = document.querySelector('main [data-hero]');
+      const hb = header ? header.getBoundingClientRect().bottom : 0;
+      const past = hero ? hero.getBoundingClientRect().bottom <= hb : window.scrollY > 10;
+      if (past !== this.state.pastHero) this.setState({ pastHero: past });
+      const cta = document.querySelector('.prod-cta');
+      const sticky = !!cta && window.matchMedia('(max-width:768px)').matches && cta.getBoundingClientRect().bottom < hb;
+      if (sticky !== this.state.stickyCta) this.setState({ stickyCta: sticky });
+    };
+    window.addEventListener('scroll', this.onScroll, { passive: true });
+    // Mobile: swipeable carousels that still auto-scroll when untouched
+    const mq = window.matchMedia('(max-width:768px)');
+    const held = new WeakMap();
+    const hold = (el, ms) => held.set(el, Date.now() + ms);
+    this._marqueeTick = () => {
+      if (mq.matches && !window.matchMedia('(prefers-reduced-motion:reduce)').matches) {
+        document.querySelectorAll('.cat-marquee').forEach((el) => {
+          if (!el._wired) {
+            el._wired = true;
+            el.addEventListener('touchstart', () => hold(el, 1e9), { passive: true });
+            el.addEventListener('touchend', () => hold(el, 2500), { passive: true });
+            el.addEventListener('touchcancel', () => hold(el, 2500), { passive: true });
+            el.addEventListener('scroll', () => { const half = el.scrollWidth / 2; if (el.scrollLeft >= half) el.scrollLeft -= half; }, { passive: true });
+          }
+          if ((held.get(el) || 0) > Date.now()) return;
+          el._pos = (el._pos == null || Math.abs(el._pos - el.scrollLeft) > 2 ? el.scrollLeft : el._pos) + 0.6;
+          const half = el.scrollWidth / 2;
+          if (half > 0 && el._pos >= half) el._pos -= half;
+          el.scrollLeft = el._pos;
+        });
+      }
+      this._raf = requestAnimationFrame(this._marqueeTick);
+    };
+    this._raf = requestAnimationFrame(this._marqueeTick);
+    this.onScroll();
+  }
+  componentWillUnmount() { if (this.onPop) window.removeEventListener('popstate', this.onPop); cancelAnimationFrame(this._raf); clearInterval(this.t); window.removeEventListener('scroll', this.onScroll); }
+  go(page, extra, fromUrl) {
+    const next = { page, q: '', qFocus: false, stickyCta: false, mob: false, imgIdx: 0, menu: false, sent: false, pastHero: false, ...(extra || {}) };
+    this.setState(next); window.scrollTo(0, 0); setTimeout(() => this.onScroll && this.onScroll(), 50);
+    if (this.routing) {
+      const url = this.urlFor(next.page, next.cat ?? this.state.cat, next.prod ?? this.state.prod);
+      if (!fromUrl && url !== location.pathname) history.pushState(null, '', url);
+      this.setTitle(next.page, next.cat ?? this.state.cat, next.prod ?? this.state.prod);
+    }
+  }
+  slug(t) { return String(t || '').toLowerCase().replace(/&/g, ' and ').replace(/[^a-z0-9]+/g, '-').replace(/-+/g, '-').replace(/^-|-$/g, ''); }
+  urlFor(page, cat, prod) {
+    const base = window.__SITE_BASE || '/';
+    const c = this.CATS[cat] || this.CATS[0];
+    const p = this.PRODUCTS.find(x => x.id === prod);
+    const map = { home: 'home', about: 'about-us', gallery: 'gallery', contact: 'contact-us', products: 'products' };
+    if (page === 'category') return base + 'products/' + this.slug(c.name);
+    if (page === 'product' && p) return base + 'products/' + this.slug(this.CATS[p.c].name) + '/' + this.slug(p.name);
+    return base + (map[page] || 'home');
+  }
+  parseUrl() {
+    const base = window.__SITE_BASE || '/';
+    let rest = location.pathname.startsWith(base) ? location.pathname.slice(base.length) : location.pathname.replace(/^\//, '');
+    const seg = rest.split('/').filter(Boolean).map(x => decodeURIComponent(x).toLowerCase());
+    const pages = { '': 'home', 'home': 'home', 'index.html': 'home', 'about-us': 'about', 'gallery': 'gallery', 'contact-us': 'contact', 'products': 'products' };
+    if (seg[0] === 'products' && seg[1]) {
+      const ci = this.CATS.findIndex(c => this.slug(c.name) === seg[1]);
+      if (ci < 0) return { page: 'products' };
+      if (seg[2]) {
+        const p = this.PRODUCTS.find(x => x.c === ci && this.slug(x.name) === seg[2]);
+        if (p) return { page: 'product', cat: ci, prod: p.id };
+      }
+      return { page: 'category', cat: ci };
+    }
+    return { page: pages[seg[0] || ''] || 'home' };
+  }
+  setTitle(page, cat, prod) {
+    const brand = 'Al Sughra Building Materials';
+    const c = this.CATS[cat]; const p = this.PRODUCTS.find(x => x.id === prod);
+    const t = { home: 'Building Materials Supplier in Sharjah, UAE | ' + brand, about: 'About Us | ' + brand, gallery: 'Gallery | ' + brand, contact: 'Contact Us | ' + brand, products: 'Products | ' + brand,
+      category: (c ? c.name : 'Products') + ' in Sharjah, UAE | ' + brand, product: (p ? p.name : 'Product') + ' | ' + brand }[page];
+    if (t) document.title = t;
+  }
+  item(p) {
+    const k = this.CATS[p.c];
+    return { ...p, imgs: p.imgs || [], mainImg: (p.imgs || [])[0] || '', slot: 'prod-' + p.id, catShort: k.short, catName: k.name, go: () => this.go('product', { prod: p.id, cat: p.c }), hasPrice: !!p.price, off: p.price && p.was ? Math.round((1 - parseFloat(p.price) / parseFloat(p.was)) * 100) : 0, r: p.r || 0, n: p.n || 0, sold: p.sold || 0,
+      soldPct: p.sold + '%', stock: 'Sold ' + p.sold + '% · limited stock', stars: '★★★★★'.slice(0, p.r) + '☆☆☆☆☆'.slice(0, 5 - p.r), reviews: p.n };
+  }
+  searchVals(s) {
+    const q = (s.q || '').trim().toLowerCase();
+    const words = q.split(/\s+/).filter(Boolean).map(w => w.replace(/&/g, 'and'));
+    const norm = t => (t || '').toLowerCase().replace(/&/g, 'and');
+    const hit = (text) => words.every(w => norm(text).includes(w));
+    const results = [];
+    if (words.length) {
+      this.CATS.forEach((c, i) => { if (hit(c.name + ' ' + (c.desc || ''))) results.push({ name: c.name, kind: 'Category', img: c.img, score: hit(c.name) ? 0 : 2, go: () => this.go('category', { cat: i }) }); });
+      this.PRODUCTS.forEach(p => {
+        const c = this.CATS[p.c];
+        if (hit(p.name + ' ' + c.name + ' ' + (p.use || '') + ' ' + (p.mat || ''))) results.push({ name: p.name, kind: 'Product · ' + c.name, img: (p.imgs || [])[0] || c.img, score: hit(p.name) ? 1 : 3, go: () => this.go('product', { prod: p.id, cat: p.c }) });
+      });
+      results.sort((a, b) => a.score - b.score);
+    }
+    const list = results.slice(0, 8);
+    return {
+      q: s.q || '', searchResults: list, searchOpen: !!(s.qFocus && words.length), searchEmpty: words.length > 0 && list.length === 0,
+      onSearch: (e) => this.setState({ q: e.target.value, qFocus: true }),
+      searchFocus: () => this.setState({ qFocus: true }),
+      searchBlur: () => setTimeout(() => this.setState({ qFocus: false }), 150),
+      searchKey: (e) => { if (e.key === 'Enter' && list[0]) { e.preventDefault(); list[0].go(); e.target.blur(); } if (e.key === 'Escape') this.setState({ qFocus: false }); }
+    };
+  }
+  productVals(all, s) {
+    const p = all.find(x => x.id === s.prod) || all[0];
+    const k = this.CATS[p.c];
+    const specs = [['Category', k.name], ['Material', p.mat], ['Finish', p.fin], ['Sizes', p.size], ['Application', p.use], ['Supply', 'Retail, wholesale & project supply'], ['Delivery', 'Across the UAE from our Sharjah warehouses']]
+      .filter(r => r[1]).map(([label, value]) => ({ label, value }));
+    const n = p.name;
+    const faqs = [
+      { q: 'What is ' + n + ' used for?', a: (p.use || 'Construction and interior finishing') + '. It is supplied by Al Sughra Building Materials in Sharjah for residential, commercial and industrial projects across the UAE.' },
+      { q: 'What materials and sizes is ' + n + ' available in?', a: [p.mat ? 'Material: ' + p.mat + '.' : '', p.size ? 'Sizes: ' + p.size + '.' : '', p.fin ? 'Finish: ' + p.fin + '.' : '', 'Contact our team to confirm current stock and exact specifications for your project.'].filter(Boolean).join(' ') },
+      { q: 'How do I choose the right ' + n + ' for my project?', a: (p.choose || 'Share your project details with our team and we will recommend the right product.') + ' Our sales team can help you select the right option.' },
+      { q: 'Can I buy ' + n + ' in bulk for a construction project?', a: 'Yes. We supply ' + n + ' in retail and wholesale quantities to contractors, fit-out companies and traders, with volume pricing for bulk and project orders.' },
+      { q: 'Do you deliver ' + n + ' across the UAE?', a: 'Yes. We deliver from our Sharjah warehouses to sites across the UAE, with free delivery on bulk orders, and also supply customers across the wider Middle East.' },
+      { q: 'How can I get a price for ' + n + '?', a: 'Click Send enquiry on this page, message us on WhatsApp at +971 50 637 2683, call +971 6 543 1115 or email sughra88@yahoo.com with the quantity and delivery location, and we will send you a quotation.' }
+    ];
+    const rel = all.filter(x => x.c === p.c && x.id !== p.id);
+    const relMarquee = rel.length >= 3;
+    const related = (relMarquee ? [0, 1] : [0]).flatMap(r => rel.map(x => ({ ...x, relSlot: 'rel-' + x.id + '-' + r })));
+    const imgs = p.imgs || []; const idx = Math.min(s.imgIdx || 0, Math.max(imgs.length - 1, 0));
+    const prodThumbs = imgs.map((src, i) => ({ src, n: i + 1, border: i === idx ? '2px solid #03acee' : '1px solid #e4e6ee', pick: () => this.setState({ imgIdx: i }) }));
+    return { prodThumbs, curProd: { ...p, curImg: imgs[idx] || '', hasImg: imgs.length > 0, noImg: imgs.length === 0, multi: imgs.length > 1, catGo: () => this.go('category', { cat: p.c }), waLink: 'https://wa.me/971506372683?text=' + encodeURIComponent('Please quote for ' + p.name) }, prodSpecs: specs, prodFaqs: faqs, related, relMarquee, relStatic: !relMarquee && rel.length > 0, hasRelated: rel.length > 0 };
+  }
+  renderVals() {
+    const s = this.state;
+    const end = new Date(); end.setHours(23, 59, 59, 999);
+    const left = Math.max(0, Math.floor((end - s.now) / 1000));
+    const pad = n => String(n).padStart(2, '0');
+    const all = this.PRODUCTS.map(p => this.item(p));
+    const tabSets = [
+      [...all].sort((a, b) => b.r - a.r || b.n - a.n).slice(0, 8),
+      [...all].sort((a, b) => b.sold - a.sold).slice(0, 8),
+      [...all].reverse().slice(0, 8)
+    ];
+    return {
+      isHome: s.page === 'home', isAbout: s.page === 'about', isProducts: s.page === 'products', isCategory: s.page === 'category', navProducts: s.page === 'products' || s.page === 'category' || s.page === 'product', isProduct: s.page === 'product', showFloatWa: s.page !== 'product', isGallery: s.page === 'gallery', isContact: s.page === 'contact',
+      goHome: () => this.go('home'), goAbout: () => this.go('about'), goProducts: () => this.go('products'),
+      goGallery: () => this.go('gallery'), goContact: () => this.go('contact'),
+      goCat0: () => this.go('category', { cat: 0 }), goCat1: () => this.go('category', { cat: 1 }),
+      heroCls: s.heroOpen ? 'open' : '', heroShowMore: !s.heroOpen, heroSecCls: s.heroOpen ? 'hero-open' : '', heroLines: (() => {
+        const full = 'Al Sughra Building Materials Trading LLC, with 20+ years of excellence in building materials, supplies tiling and flooring accessories, drywall, plastering and ceiling systems, concrete and masonry accessories, sealing, jointing and protection materials, and scaffolding and architectural products to contractors, fit-out companies and builders across the UAE and the Middle East.';
+        const short = 'Al Sughra Building Materials Trading LLC, with 20+ years of excellence in building materials…';
+        const w = (s.heroOpen ? full : short).split(' '); const out = [];
+        for (let i = 0; i < w.length; i += 5) out.push({ t: w.slice(i, i + 5).join(' ') });
+        return out; })(), heroExpand: () => this.setState({ heroOpen: true }), mobOpen: s.mob, toggleMob: () => this.setState({ mob: !s.mob }), menuOpen: s.menu, openMenu: () => this.setState({ menu: true }), closeMenu: () => this.setState({ menu: false }),
+      cats: this.CATS.map((c, i) => ({ ...c, products: this.PRODUCTS.filter(p => p.c === i).map(p => p.name).join(' · '), num: i + 1, slot: 'cat-' + i, thumbSlot: 'menu-cat-' + i, active: s.cat === i, navActive: (s.page === 'category' || s.page === 'product') && s.cat === i, go: () => this.go('category', { cat: i }), cardSlot: 'prodcat-' + i })),
+      curCat: this.CATS[s.cat],
+      otherCats: [0, 1].flatMap(k => this.CATS.map((c, i) => ({ ...c, i })).filter(c => c.i !== s.cat).map(c => ({ ...c, slot: 'othercat-' + c.i + '-' + k, go: () => this.go('category', { cat: c.i }) }))),
+      catItems: all.filter(p => p.c === s.cat),
+      ...this.productVals(all, s),
+      hh: pad(Math.floor(left / 3600)), mm: pad(Math.floor(left % 3600 / 60)), ss: pad(left % 60),
+      deals: [...all].sort((a, b) => b.off - a.off).slice(0, 5),
+      tabs: ['Top rated', 'Best sellers', 'New arrivals'].map((label, i) => ({ label, active: s.tab === i, go: () => this.setState({ tab: i }) })),
+      tabItems: tabSets[s.tab],
+      gallery: this.GALLERY.map((g, i) => ({ ...g, slot: 'gallery-' + i })),
+      featured: ['d4', 'p1', 's1'].map(id => all.find(p => p.id === id)).map(p => ({ ...p, homeSlot: 'home-feat-' + p.id, img: p.mainImg || this.CATS[p.c].img, go: () => this.go('category', { cat: p.c }) })),
+      galleryHome: [['ASBM showroom reception counter, Sharjah'], ['L-angle stainless steel tile trims display'], ['ASBM decorative profiles display'], ['Rebar spacers, metal lath and masonry accessories display'], ['Drywall profiles, corner beads and ceiling accessories display'], ['Showroom display: rubber parking products, formwork accessories and PVC drywall beads']].map(([label], i) => ({ label, img: 'assets/gallery/home-v2-' + (i + 1) + '.jpg', slot: 'home-gal2-' + i, open: () => this.setState({ lightbox: { img: 'assets/gallery/home-v2-' + (i + 1) + '.jpg', label } }) })),
+      lightboxOpen: !!s.lightbox, lightbox: s.lightbox || { img: '', label: '' }, closeLightbox: () => this.setState({ lightbox: null }),
+      ...this.searchVals(s),
+      sent: s.sent, send: () => this.setState({ sent: true }),
+      pastHero: s.pastHero, stickyCta: s.stickyCta && s.page === 'product',
+      quoteOpen: s.quote, quoteSent: s.quoteSent,
+      openQuote: () => this.setState({ quote: true, quoteSent: false, menu: false }),
+      closeQuote: () => this.setState({ quote: false }),
+      sendQuote: () => this.setState({ quoteSent: true })
+    };
+  }
+}
+</script>
+</body>
+</html>

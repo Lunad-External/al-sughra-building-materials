@@ -16,6 +16,13 @@ Static website for Al Sughra Building Materials Trading LLC, Sharjah, UAE.
 To use your own domain (e.g. www.asbmuae.net), add it under **Settings → Pages → Custom domain**
 and point the domain's DNS to GitHub Pages.
 
+## Clean URLs
+
+Pages use clean addresses: `/home`, `/about-us`, `/gallery`, `/contact-us`, `/products`,
+`/products/<category>` and `/products/<category>/<product>`.
+`404.html` is a copy of `index.html` so GitHub Pages can open any of these addresses directly.
+Whenever `index.html` changes, copy it over `404.html` as well.
+
 ## Structure
 
 - `index.html` – the whole site (Home, About, Products, categories, product pages, Gallery, Contact)
